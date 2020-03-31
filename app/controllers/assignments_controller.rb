@@ -11,12 +11,12 @@ class AssignmentsController < ApplicationController
       @assignment = Assignment.new
   end
 
-  def create
-      @assignment = Assignment.new(assignment_params)
+  def create 
+      @assignment = Assignment.new(assignment_params) 
     if @assignment.save
       # if saved to database
       flash[:notice] = "Successfully added the assignment."
-      redirect_to assignment_path(@assignment) # go to show employee page
+      redirect_to assignment_path(@assignment) # go to show assignment page
     else
       # return to the 'new' form
       render action: 'new'
@@ -40,6 +40,7 @@ class AssignmentsController < ApplicationController
     
     def assignment_params
       params.require(:assignment).permit(:store_id, :employee_id, :start_date, :end_date) unless params[:store_id].nil? || params[:employee_id].nil? || params[:start_date].nil?
+
     end
 
 end

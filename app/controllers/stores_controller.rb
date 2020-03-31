@@ -1,16 +1,38 @@
 class StoresController < ApplicationController
   
-  before_action :set_store
+  before_action :set_store, only: [:edit, :update]
   
   def index
 		@active_stores = Store.active
-		@inactive_stores = Stores.inactive
+		@inactive_stores = Store.inactive
   end
   
   def new
+      @store = Store.new
   end
 
   def create
+       @store = Store.new(store_params)
+    if @store.save
+      # if saved to database
+      flash[:notice] = "Successfully added #{@store.name} as a store"
+      redirect_to store_path(@store) # go to show store page
+    else
+      # return to the 'new' form
+      render action: 'new'
+    end
+  end
+  
+  def edit
+  end
+  
+  def update
+      if @store.update_attributes(store_params)
+      flash[:notice] = "Updated store information for #{@store.name}."
+      redirect_to @store
+    else
+      render action: 'edit'
+    end
   end
   
   private
@@ -19,7 +41,7 @@ class StoresController < ApplicationController
     end
     
     def store_params
-      params.require(:store).permit(:name, :street, :city, :state, :zip, :phone, :active)
+      params.require(:store).permit(:name, :street, :city, :state, :zip, :phone, :active) unless params.nil?
     end
   
 end
