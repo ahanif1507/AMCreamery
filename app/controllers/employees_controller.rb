@@ -1,13 +1,15 @@
 class EmployeesController < ApplicationController
   
+  before_action :set_employee, only: [:update, :edit, :show]
+  
   def index
-      @active_managers = Employee.managers.active
-      @active_employees = Employee.active
-      @inactive_employees = Employee.inactive
+    #   @active_managers = Employee.managers.active
+    #   @active_employees = Employee.active
+    #   @inactive_employees = Employee.inactive
   end
     
   def show
-      @employee = Employee.find(params[:id])
+      #@employee = Employee.find(params[:id])
       @current_assignment = Assignment.for_employee(@employee.id).current
 	  @previous_assignments = Assignment.for_employee(@employee.id).past.chronological
   end
@@ -20,7 +22,7 @@ class EmployeesController < ApplicationController
       @employee = Employee.new(employee_params)
     if @employee.save
       # if saved to database
-      flash[:notice] = "Successfully created #{@employee.proper_name}."
+      flash[:notice] = "Successfully added #{@employee.proper_name} as an employee."
       redirect_to employee_path(@employee) # go to show employee page
     else
       # return to the 'new' form
@@ -29,23 +31,22 @@ class EmployeesController < ApplicationController
   end
   
   def edit
-      @employee = Employee.find(params[:id])
   end
   
   def update
-       if @employee.update_attributes(employee_params)
-      flash[:notice] = "Successfully updated #{@employee.proper_name}."
+    if @employee.update_attributes(employee_params)
+      flash[:notice] = "Updated #{@employee.proper_name}'s information."
       redirect_to @employee
     else
       render action: 'edit'
     end
   end
   
-  def destroy
-      @employee.destroy
-    flash[:notice] = "Successfully removed #{@employee.proper_name} from the A&M Creamery system."
-    redirect_to employees_url
-  end
+#   def destroy
+#     @employee.destroy
+#     flash[:notice] = "Successfully removed #{@employee.proper_name} from the A&M Creamery system."
+#     redirect_to employees_url
+#   end
   
   
    private
