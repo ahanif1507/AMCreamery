@@ -1,7 +1,15 @@
 class HomeController < ApplicationController
-  def new
+  
+  def index
   end
-
-  def create
+    
+  def about
   end
+  
+  def contact
+  end
+  
+  def privacy
+  end
+  
 end
