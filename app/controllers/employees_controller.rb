@@ -3,9 +3,9 @@ class EmployeesController < ApplicationController
   before_action :set_employee, only: [:update, :edit, :show]
   
   def index
-    #   @active_managers = Employee.managers.active
-    #   @active_employees = Employee.active
-    #   @inactive_employees = Employee.inactive
+      @active_managers = Employee.managers.active
+      @active_employees = Employee.active
+      @inactive_employees = Employee.inactive
   end
     
   def show
@@ -55,7 +55,7 @@ class EmployeesController < ApplicationController
     end
     
     def employee_params
-      params.require(:employee).permit(:first_name, :last_name, :ssn, :phone, :date_of_birth, :role, :active)
+      params.require(:employee).permit(:first_name, :last_name, :ssn, :phone, :date_of_birth, :role, :active) unless params.nil?
     end
     
 end

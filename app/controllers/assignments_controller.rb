@@ -1,6 +1,6 @@
 class AssignmentsController < ApplicationController
   
-  before_action :set_assignment
+  before_action :set_assignment, only: [:destroy]
   
   def index
       @current_assignments = Assignment.current.chronological
@@ -39,7 +39,7 @@ class AssignmentsController < ApplicationController
     end
     
     def assignment_params
-      params.require(:assignment).permit(:store_id, :employee_id, :start_date, :end_date)
+      params.require(:assignment).permit(:store_id, :employee_id, :start_date, :end_date) unless params[:store_id].nil? || params[:employee_id].nil? || params[:start_date].nil?
     end
 
 end
