@@ -8,8 +8,8 @@ class StoresController < ApplicationController
   end
   
   def show
-    @current_managers =  Assignment.current.for_role("manager").map!{|a| a.employee}
-    @current_employees = Assignment.current.for_store(@store.id).map!{|a| a.employee}
+    @current_managers =  Assignment.current.for_store(@store.id).for_role("manager").map!{|a| a.employee}
+    @current_employees = Assignment.current.for_store(@store.id).for_role("employee").map!{|a| a.employee}
   end
   
   def new
