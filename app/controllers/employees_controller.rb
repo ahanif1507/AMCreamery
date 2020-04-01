@@ -10,7 +10,7 @@ class EmployeesController < ApplicationController
     
   def show
       @current_assignment = Assignment.for_employee(@employee.id).current
-	  @previous_assignments = Assignment.for_employee(@employee.id).past.chronological
+	  @previous_assignments = Assignment.for_employee(@employee.id).past
   end
       
   def new
