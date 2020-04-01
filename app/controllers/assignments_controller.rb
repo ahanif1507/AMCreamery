@@ -1,6 +1,6 @@
 class AssignmentsController < ApplicationController
   
-  before_action :set_assignment, only: [:destroy]
+  before_action :set_assignment, only: [:destroy, :terminate]
   
   def index
       @current_assignments = Assignment.current.chronological
@@ -24,7 +24,9 @@ class AssignmentsController < ApplicationController
   end
   
   def terminate
-      @assignment = Assignment.terminate
+    @assignment = Assignment.terminate
+    flash[:notice] = "Terminated assignment in the system."
+    redirect_to assignments_url
   end
   
   def destroy
