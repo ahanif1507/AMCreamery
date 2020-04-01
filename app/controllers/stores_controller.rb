@@ -7,6 +7,11 @@ class StoresController < ApplicationController
 		@inactive_stores = Store.inactive
   end
   
+  def show
+    @current_managers =  Assignment.current.for_role("manager").map!{|a| a.employee}
+    @current_employees = Assignment.current.for_store(@store.id).map!{|a| a.employee}
+  end
+  
   def new
       @store = Store.new
   end
@@ -41,7 +46,7 @@ class StoresController < ApplicationController
     end
     
     def store_params
-      params.require(:store).permit(:name, :street, :city, :state, :zip, :phone, :active) unless params.nil?
+      params.require(:store).permit(:name, :street, :city, :state, :zip, :phone, :active) 
     end
   
 end
