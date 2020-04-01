@@ -24,9 +24,11 @@ class AssignmentsController < ApplicationController
   end
   
   def terminate
-    @assignment = Assignment.terminate
+    puts @assignment.start_date
+    if @assignment.terminate
     flash[:notice] = "Terminated assignment in the system."
     redirect_to assignments_url
+    end
   end
   
   def destroy

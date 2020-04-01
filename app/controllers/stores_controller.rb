@@ -8,8 +8,13 @@ class StoresController < ApplicationController
   end
   
   def show
-    @current_managers =  Assignment.current.for_store(@store.id).for_role("manager").map!{|a| a.employee}
-    @current_employees = Assignment.current.for_store(@store.id).for_role("employee").map!{|a| a.employee}
+
+   # @current_managers =  Assignment.current.for_store(@store.id).for_role("manager").map!{|a| a.employee}
+   # @current_employees = Assignment.current.for_store(@store.id).for_role("employee").map!{|a| a.employee}
+
+    @current_managers = @store.assignments.current.map!{|a| a.employee}.select{|e| e.role == 'manager'}
+    @current_employees = @store.assignments.current.map!{|a| a.employee}.select{|e| e.role == 'employee'}
+
   end
   
   def new

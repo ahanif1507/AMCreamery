@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'stores/edit'
   get 'assignments/index'
   get 'assignments/new'
+  get 'assignments/terminate'
   get 'employees/index'
   get 'employees/new'
   get 'employees/show'
