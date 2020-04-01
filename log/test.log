@@ -277,3 +277,275 @@ I, [2020-04-01T00:19:16.546401 #29203]  INFO -- : Redirected to http://www.examp
 I, [2020-04-01T00:19:16.547523 #29203]  INFO -- : Completed 302 Found in 16ms (ActiveRecord: 0.8ms)
 D, [2020-04-01T00:19:16.554232 #29203] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "assignments"[0m
 D, [2020-04-01T00:19:16.555568 #29203] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:52:41.352536 #20033] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-01T07:52:41.452834 #20033] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:52:41.453313 #20033]  INFO -- : -----------------------------------------
+I, [2020-04-01T07:52:41.453362 #20033]  INFO -- : HomeControllerTest: test_should_get_about
+I, [2020-04-01T07:52:41.453392 #20033]  INFO -- : -----------------------------------------
+I, [2020-04-01T07:52:41.573405 #20033]  INFO -- : Started GET "/home/about" for 127.0.0.1 at 2020-04-01 07:52:41 +0000
+I, [2020-04-01T07:52:41.584895 #20033]  INFO -- : Processing by HomeController#about as HTML
+I, [2020-04-01T07:52:41.594805 #20033]  INFO -- :   Rendering home/about.html.erb within layouts/application
+I, [2020-04-01T07:52:41.596743 #20033]  INFO -- :   Rendered home/about.html.erb within layouts/application (1.4ms)
+I, [2020-04-01T07:52:41.598558 #20033]  INFO -- : Completed 200 OK in 13ms (Views: 6.7ms | ActiveRecord: 0.0ms)
+D, [2020-04-01T07:52:41.606978 #20033] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:52:41.608135 #20033] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:52:41.608547 #20033]  INFO -- : -------------------------------------------
+I, [2020-04-01T07:52:41.608656 #20033]  INFO -- : HomeControllerTest: test_should_get_contact
+I, [2020-04-01T07:52:41.608733 #20033]  INFO -- : -------------------------------------------
+I, [2020-04-01T07:52:41.609881 #20033]  INFO -- : Started GET "/home/contact" for 127.0.0.1 at 2020-04-01 07:52:41 +0000
+I, [2020-04-01T07:52:41.611156 #20033]  INFO -- : Processing by HomeController#contact as HTML
+I, [2020-04-01T07:52:41.613090 #20033]  INFO -- :   Rendering home/contact.html.erb within layouts/application
+I, [2020-04-01T07:52:41.613965 #20033]  INFO -- :   Rendered home/contact.html.erb within layouts/application (0.4ms)
+I, [2020-04-01T07:52:41.615357 #20033]  INFO -- : Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+D, [2020-04-01T07:52:41.618137 #20033] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:52:41.619030 #20033] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:52:41.619548 #20033]  INFO -- : -----------------------------------------
+I, [2020-04-01T07:52:41.619643 #20033]  INFO -- : HomeControllerTest: test_should_get_index
+I, [2020-04-01T07:52:41.619728 #20033]  INFO -- : -----------------------------------------
+I, [2020-04-01T07:52:41.620744 #20033]  INFO -- : Started GET "/home" for 127.0.0.1 at 2020-04-01 07:52:41 +0000
+I, [2020-04-01T07:52:41.621745 #20033]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T07:52:41.623647 #20033]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T07:52:41.624446 #20033]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.3ms)
+I, [2020-04-01T07:52:41.625710 #20033]  INFO -- : Completed 200 OK in 4ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+D, [2020-04-01T07:52:41.628357 #20033] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:52:41.629189 #20033] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:52:41.629623 #20033]  INFO -- : -------------------------------------------
+I, [2020-04-01T07:52:41.629708 #20033]  INFO -- : HomeControllerTest: test_should_get_privacy
+I, [2020-04-01T07:52:41.629795 #20033]  INFO -- : -------------------------------------------
+I, [2020-04-01T07:52:41.630736 #20033]  INFO -- : Started GET "/home/privacy" for 127.0.0.1 at 2020-04-01 07:52:41 +0000
+I, [2020-04-01T07:52:41.631845 #20033]  INFO -- : Processing by HomeController#privacy as HTML
+I, [2020-04-01T07:52:41.633663 #20033]  INFO -- :   Rendering home/privacy.html.erb within layouts/application
+I, [2020-04-01T07:52:41.634463 #20033]  INFO -- :   Rendered home/privacy.html.erb within layouts/application (0.3ms)
+I, [2020-04-01T07:52:41.635821 #20033]  INFO -- : Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+D, [2020-04-01T07:52:41.638445 #20033] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:53:24.421204 #20115] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-01T07:53:24.513454 #20115] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:53:24.513913 #20115]  INFO -- : -----------------------------------------
+I, [2020-04-01T07:53:24.513961 #20115]  INFO -- : HomeControllerTest: test_should_get_index
+I, [2020-04-01T07:53:24.513987 #20115]  INFO -- : -----------------------------------------
+D, [2020-04-01T07:53:24.597577 #20115] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:53:24.653295 #20115] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:53:24.653693 #20115]  INFO -- : -------------------------------------------
+I, [2020-04-01T07:53:24.653738 #20115]  INFO -- : HomeControllerTest: test_should_get_privacy
+I, [2020-04-01T07:53:24.653764 #20115]  INFO -- : -------------------------------------------
+D, [2020-04-01T07:53:24.654218 #20115] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:53:24.697284 #20115] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:53:24.697733 #20115]  INFO -- : -----------------------------------------
+I, [2020-04-01T07:53:24.697780 #20115]  INFO -- : HomeControllerTest: test_should_get_about
+I, [2020-04-01T07:53:24.697806 #20115]  INFO -- : -----------------------------------------
+D, [2020-04-01T07:53:24.698223 #20115] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:53:24.741602 #20115] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:53:24.741991 #20115]  INFO -- : -------------------------------------------
+I, [2020-04-01T07:53:24.742036 #20115]  INFO -- : HomeControllerTest: test_should_get_contact
+I, [2020-04-01T07:53:24.742061 #20115]  INFO -- : -------------------------------------------
+D, [2020-04-01T07:53:24.742559 #20115] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:53:48.946509 #20177] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-01T07:53:49.029800 #20177] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:53:49.030249 #20177]  INFO -- : -----------------------------------------
+I, [2020-04-01T07:53:49.030295 #20177]  INFO -- : HomeControllerTest: test_should_get_index
+I, [2020-04-01T07:53:49.030319 #20177]  INFO -- : -----------------------------------------
+I, [2020-04-01T07:53:49.112922 #20177]  INFO -- : Started GET "/home" for 127.0.0.1 at 2020-04-01 07:53:49 +0000
+I, [2020-04-01T07:53:49.122537 #20177]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T07:53:49.130823 #20177]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T07:53:49.132431 #20177]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.2ms)
+I, [2020-04-01T07:53:49.133970 #20177]  INFO -- : Completed 200 OK in 11ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+D, [2020-04-01T07:53:49.140565 #20177] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:53:49.141553 #20177] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:53:49.141866 #20177]  INFO -- : -------------------------------------------
+I, [2020-04-01T07:53:49.141975 #20177]  INFO -- : HomeControllerTest: test_should_get_contact
+I, [2020-04-01T07:53:49.142088 #20177]  INFO -- : -------------------------------------------
+I, [2020-04-01T07:53:49.143153 #20177]  INFO -- : Started GET "/home/contact" for 127.0.0.1 at 2020-04-01 07:53:49 +0000
+I, [2020-04-01T07:53:49.144532 #20177]  INFO -- : Processing by HomeController#contact as HTML
+I, [2020-04-01T07:53:49.146409 #20177]  INFO -- :   Rendering home/contact.html.erb within layouts/application
+I, [2020-04-01T07:53:49.147197 #20177]  INFO -- :   Rendered home/contact.html.erb within layouts/application (0.4ms)
+I, [2020-04-01T07:53:49.148431 #20177]  INFO -- : Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+D, [2020-04-01T07:53:49.150998 #20177] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:53:49.151761 #20177] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:53:49.152139 #20177]  INFO -- : -------------------------------------------
+I, [2020-04-01T07:53:49.152222 #20177]  INFO -- : HomeControllerTest: test_should_get_privacy
+I, [2020-04-01T07:53:49.152288 #20177]  INFO -- : -------------------------------------------
+I, [2020-04-01T07:53:49.153227 #20177]  INFO -- : Started GET "/home/privacy" for 127.0.0.1 at 2020-04-01 07:53:49 +0000
+I, [2020-04-01T07:53:49.154342 #20177]  INFO -- : Processing by HomeController#privacy as HTML
+I, [2020-04-01T07:53:49.156334 #20177]  INFO -- :   Rendering home/privacy.html.erb within layouts/application
+I, [2020-04-01T07:53:49.157136 #20177]  INFO -- :   Rendered home/privacy.html.erb within layouts/application (0.4ms)
+I, [2020-04-01T07:53:49.158244 #20177]  INFO -- : Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+D, [2020-04-01T07:53:49.160967 #20177] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:53:49.161786 #20177] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:53:49.162121 #20177]  INFO -- : -----------------------------------------
+I, [2020-04-01T07:53:49.162203 #20177]  INFO -- : HomeControllerTest: test_should_get_about
+I, [2020-04-01T07:53:49.162282 #20177]  INFO -- : -----------------------------------------
+I, [2020-04-01T07:53:49.163272 #20177]  INFO -- : Started GET "/home/about" for 127.0.0.1 at 2020-04-01 07:53:49 +0000
+I, [2020-04-01T07:53:49.164411 #20177]  INFO -- : Processing by HomeController#about as HTML
+I, [2020-04-01T07:53:49.166156 #20177]  INFO -- :   Rendering home/about.html.erb within layouts/application
+I, [2020-04-01T07:53:49.166873 #20177]  INFO -- :   Rendered home/about.html.erb within layouts/application (0.3ms)
+I, [2020-04-01T07:53:49.168007 #20177]  INFO -- : Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+D, [2020-04-01T07:53:49.170404 #20177] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:55:36.227256 #20378] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-01T07:55:36.310268 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:55:36.310735 #20378]  INFO -- : ---------------------------------------------------------------------
+I, [2020-04-01T07:55:36.310783 #20378]  INFO -- : EmployeesControllerTest: test_should_create_employee_when_appropriate
+I, [2020-04-01T07:55:36.310809 #20378]  INFO -- : ---------------------------------------------------------------------
+D, [2020-04-01T07:55:36.420694 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.424382 #20378] DEBUG -- :   [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "234879253"], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.426068 #20378] DEBUG -- :   [1m[36mEmployee Create (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "234879253"], ["date_of_birth", "2001-04-01"], ["phone", "7688653971"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T07:55:36.427452 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.428411 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+I, [2020-04-01T07:55:36.437928 #20378]  INFO -- : Started POST "/employees" for 127.0.0.1 at 2020-04-01 07:55:36 +0000
+I, [2020-04-01T07:55:36.448295 #20378]  INFO -- : Processing by EmployeesController#create as HTML
+I, [2020-04-01T07:55:36.448643 #20378]  INFO -- :   Parameters: {"employee"=>{"first_name"=>"Ezra", "last_name"=>"Bridger", "ssn"=>"037201234", "phone"=>"4122683259", "date_of_birth"=>"2001-04-01", "role"=>"employee", "active"=>"true"}}
+D, [2020-04-01T07:55:36.454079 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.456088 #20378] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "037201234"], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.457828 #20378] DEBUG -- :   [1m[36mEmployee Create (0.1ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ezra"], ["last_name", "Bridger"], ["ssn", "037201234"], ["date_of_birth", "2001-04-01"], ["phone", "4122683259"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T07:55:36.459320 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.460640 #20378] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+I, [2020-04-01T07:55:36.462769 #20378]  INFO -- : Redirected to http://www.example.com/employees/2
+I, [2020-04-01T07:55:36.464009 #20378]  INFO -- : Completed 302 Found in 15ms (ActiveRecord: 0.5ms)
+D, [2020-04-01T07:55:36.472079 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "employees"[0m
+D, [2020-04-01T07:55:36.473095 #20378] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" ORDER BY "employees"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+D, [2020-04-01T07:55:36.475033 #20378] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:55:36.475949 #20378] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:55:36.476285 #20378]  INFO -- : --------------------------------------------------
+I, [2020-04-01T07:55:36.476376 #20378]  INFO -- : EmployeesControllerTest: test_should_show_employee
+I, [2020-04-01T07:55:36.476461 #20378]  INFO -- : --------------------------------------------------
+D, [2020-04-01T07:55:36.477629 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.479271 #20378] DEBUG -- :   [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "198060612"], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.480955 #20378] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "198060612"], ["date_of_birth", "2001-04-01"], ["phone", "2251773166"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T07:55:36.482440 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.495877 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.497665 #20378] DEBUG -- :   [1m[36mStore Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "stores" WHERE LOWER("stores"."name") = LOWER(?) LIMIT ?[0m  [["name", "CMU"], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.499221 #20378] DEBUG -- :   [1m[36mStore Create (0.2ms)[0m  [1m[32mINSERT INTO "stores" ("name", "street", "city", "state", "zip", "phone", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "CMU"], ["street", "5000 Forbes Avenue"], ["city", "Pittsburgh"], ["state", "PA"], ["zip", "15213"], ["phone", "5653102665"], ["active", 1]]
+D, [2020-04-01T07:55:36.500698 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.519728 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.521916 #20378] DEBUG -- :   [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT "employees".* FROM "employees" WHERE "employees"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T07:55:36.523704 #20378] DEBUG -- :   [1m[36mStore Load (0.2ms)[0m  [1m[34mSELECT "stores".* FROM "stores" WHERE "stores"."active" = ?[0m  [["active", 1]]
+D, [2020-04-01T07:55:36.537133 #20378] DEBUG -- :   [1m[36mEmployee Load (0.2ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.547682 #20378] DEBUG -- :   [1m[36mAssignment Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "assignments" WHERE "assignments"."employee_id" = ? AND (end_date IS NULL) LIMIT ?[0m  [["employee_id", 1], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.549253 #20378] DEBUG -- :   [1m[36mAssignment Create (0.3ms)[0m  [1m[32mINSERT INTO "assignments" ("store_id", "employee_id", "start_date") VALUES (?, ?, ?)[0m  [["store_id", 1], ["employee_id", 1], ["start_date", "2019-04-01"]]
+D, [2020-04-01T07:55:36.550366 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T07:55:36.551929 #20378]  INFO -- : Started GET "/employees/1" for 127.0.0.1 at 2020-04-01 07:55:36 +0000
+I, [2020-04-01T07:55:36.553175 #20378]  INFO -- : Processing by EmployeesController#show as HTML
+I, [2020-04-01T07:55:36.553495 #20378]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2020-04-01T07:55:36.554522 #20378] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2020-04-01T07:55:36.557895 #20378]  INFO -- : Completed 500  in 4ms (ActiveRecord: 0.1ms)
+F, [2020-04-01T07:55:36.573975 #20378] FATAL -- : 
+NoMethodError - undefined method `id' for 1:Integer
+Did you mean?  i:
+  app/models/assignment.rb:14:in `block in <class:Assignment>'
+  app/controllers/employees_controller.rb:12:in `show'
+  test/controllers/employees_controller_test.rb:19:in `block in <class:EmployeesControllerTest>'
+
+D, [2020-04-01T07:55:36.579561 #20378] DEBUG -- :   [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:55:36.580767 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:55:36.581193 #20378]  INFO -- : ---------------------------------------------------------------------------
+I, [2020-04-01T07:55:36.581311 #20378]  INFO -- : EmployeesControllerTest: test_should_not_create_employee_when_inappropriate
+I, [2020-04-01T07:55:36.581455 #20378]  INFO -- : ---------------------------------------------------------------------------
+D, [2020-04-01T07:55:36.583044 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.585093 #20378] DEBUG -- :   [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "374595858"], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.586815 #20378] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "374595858"], ["date_of_birth", "2001-04-01"], ["phone", "0541407165"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T07:55:36.588731 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T07:55:36.590490 #20378]  INFO -- : Started POST "/employees" for 127.0.0.1 at 2020-04-01 07:55:36 +0000
+I, [2020-04-01T07:55:36.591844 #20378]  INFO -- : Processing by EmployeesController#create as HTML
+I, [2020-04-01T07:55:36.592200 #20378]  INFO -- :   Parameters: {"employee"=>{"first_name"=>nil, "last_name"=>"Bridger", "ssn"=>"037201234", "phone"=>"4122683259", "date_of_birth"=>"2001-04-01", "role"=>"employee", "active"=>"true"}}
+D, [2020-04-01T07:55:36.593642 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.805800 #20378] DEBUG -- :   [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "037201234"], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.807480 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+I, [2020-04-01T07:55:36.811905 #20378]  INFO -- :   Rendering employees/new.html.erb within layouts/application
+I, [2020-04-01T07:55:36.813433 #20378]  INFO -- :   Rendered employees/new.html.erb within layouts/application (1.1ms)
+I, [2020-04-01T07:55:36.815110 #20378]  INFO -- : Completed 200 OK in 223ms (Views: 6.0ms | ActiveRecord: 0.3ms)
+D, [2020-04-01T07:55:36.818866 #20378] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:55:36.819707 #20378] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:55:36.820052 #20378]  INFO -- : ------------------------------------------------------------------------------
+I, [2020-04-01T07:55:36.820164 #20378]  INFO -- : EmployeesControllerTest: test_should_not_have_the_ability_to_destroy_employees
+I, [2020-04-01T07:55:36.820244 #20378]  INFO -- : ------------------------------------------------------------------------------
+D, [2020-04-01T07:55:36.821400 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.823042 #20378] DEBUG -- :   [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "117330699"], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.824953 #20378] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "117330699"], ["date_of_birth", "2001-04-01"], ["phone", "5784822908"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T07:55:36.826433 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T07:55:36.827777 #20378]  INFO -- : Started DELETE "/employees/1" for 127.0.0.1 at 2020-04-01 07:55:36 +0000
+F, [2020-04-01T07:55:36.846181 #20378] FATAL -- : 
+AbstractController::ActionNotFound - The action 'destroy' could not be found for EmployeesController:
+  test/controllers/employees_controller_test.rb:64:in `block in <class:EmployeesControllerTest>'
+
+D, [2020-04-01T07:55:36.849993 #20378] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:55:36.850771 #20378] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:55:36.851130 #20378]  INFO -- : ---------------------------------------------------------------------
+I, [2020-04-01T07:55:36.851227 #20378]  INFO -- : EmployeesControllerTest: test_should_update_employee_when_appropriate
+I, [2020-04-01T07:55:36.851327 #20378]  INFO -- : ---------------------------------------------------------------------
+D, [2020-04-01T07:55:36.852781 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.854976 #20378] DEBUG -- :   [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "204890229"], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.856768 #20378] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "204890229"], ["date_of_birth", "2001-04-01"], ["phone", "1048029741"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T07:55:36.858228 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T07:55:36.859746 #20378]  INFO -- : Started PATCH "/employees/1" for 127.0.0.1 at 2020-04-01 07:55:36 +0000
+I, [2020-04-01T07:55:36.861108 #20378]  INFO -- : Processing by EmployeesController#update as HTML
+I, [2020-04-01T07:55:36.861486 #20378]  INFO -- :   Parameters: {"employee"=>{"first_name"=>"Mark", "last_name"=>"Heimann", "ssn"=>"037201234", "phone"=>"4122683259", "date_of_birth"=>"1994-04-01", "role"=>"employee", "active"=>"true"}, "id"=>"1"}
+D, [2020-04-01T07:55:36.862456 #20378] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.863895 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.865919 #20378] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? AND "employees"."id" != ? LIMIT ?[0m  [["ssn", "037201234"], ["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.867946 #20378] DEBUG -- :   [1m[36mEmployee Update (0.1ms)[0m  [1m[33mUPDATE "employees" SET "first_name" = ?, "last_name" = ?, "ssn" = ?, "phone" = ?, "date_of_birth" = ? WHERE "employees"."id" = ?[0m  [["first_name", "Mark"], ["last_name", "Heimann"], ["ssn", "037201234"], ["phone", "4122683259"], ["date_of_birth", "1994-04-01"], ["id", 1]]
+D, [2020-04-01T07:55:36.869394 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T07:55:36.870326 #20378]  INFO -- : Redirected to http://www.example.com/employees/1
+I, [2020-04-01T07:55:36.871469 #20378]  INFO -- : Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+D, [2020-04-01T07:55:36.876615 #20378] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:55:36.877356 #20378] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:55:36.877738 #20378]  INFO -- : ---------------------------------------------------------------------------
+I, [2020-04-01T07:55:36.877827 #20378]  INFO -- : EmployeesControllerTest: test_should_not_update_employee_when_inappropriate
+I, [2020-04-01T07:55:36.877908 #20378]  INFO -- : ---------------------------------------------------------------------------
+D, [2020-04-01T07:55:36.878973 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.880649 #20378] DEBUG -- :   [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "387159590"], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.882332 #20378] DEBUG -- :   [1m[36mEmployee Create (0.3ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "387159590"], ["date_of_birth", "2001-04-01"], ["phone", "3744962093"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T07:55:36.883768 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T07:55:36.885153 #20378]  INFO -- : Started PATCH "/employees/1" for 127.0.0.1 at 2020-04-01 07:55:36 +0000
+I, [2020-04-01T07:55:36.886362 #20378]  INFO -- : Processing by EmployeesController#update as HTML
+I, [2020-04-01T07:55:36.886760 #20378]  INFO -- :   Parameters: {"employee"=>{"first_name"=>"Mark", "last_name"=>nil, "ssn"=>"037201234", "phone"=>"4122683259", "date_of_birth"=>"1994-04-01", "role"=>"employee", "active"=>"true"}, "id"=>"1"}
+D, [2020-04-01T07:55:36.887768 #20378] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.889347 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.892075 #20378] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? AND "employees"."id" != ? LIMIT ?[0m  [["ssn", "037201234"], ["id", 1], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.894276 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+I, [2020-04-01T07:55:36.896068 #20378]  INFO -- :   Rendering employees/edit.html.erb within layouts/application
+I, [2020-04-01T07:55:36.896814 #20378]  INFO -- :   Rendered employees/edit.html.erb within layouts/application (0.4ms)
+I, [2020-04-01T07:55:36.898353 #20378]  INFO -- : Completed 200 OK in 11ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+D, [2020-04-01T07:55:36.902503 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:55:36.903296 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:55:36.903622 #20378]  INFO -- : ---------------------------------------------
+I, [2020-04-01T07:55:36.903706 #20378]  INFO -- : EmployeesControllerTest: test_should_get_edit
+I, [2020-04-01T07:55:36.903771 #20378]  INFO -- : ---------------------------------------------
+D, [2020-04-01T07:55:36.904852 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.906392 #20378] DEBUG -- :   [1m[36mEmployee Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "233517599"], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.908057 #20378] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "233517599"], ["date_of_birth", "2001-04-01"], ["phone", "6158436188"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T07:55:36.910063 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T07:55:36.911666 #20378]  INFO -- : Started GET "/employees/1/edit" for 127.0.0.1 at 2020-04-01 07:55:36 +0000
+I, [2020-04-01T07:55:36.912832 #20378]  INFO -- : Processing by EmployeesController#edit as HTML
+I, [2020-04-01T07:55:36.913150 #20378]  INFO -- :   Parameters: {"id"=>"1"}
+D, [2020-04-01T07:55:36.914062 #20378] DEBUG -- :   [1m[36mEmployee Load (0.1ms)[0m  [1m[34mSELECT  "employees".* FROM "employees" WHERE "employees"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+I, [2020-04-01T07:55:36.915551 #20378]  INFO -- :   Rendering employees/edit.html.erb within layouts/application
+I, [2020-04-01T07:55:36.916000 #20378]  INFO -- :   Rendered employees/edit.html.erb within layouts/application (0.1ms)
+I, [2020-04-01T07:55:36.917058 #20378]  INFO -- : Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.1ms)
+D, [2020-04-01T07:55:36.919984 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:55:36.920779 #20378] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:55:36.921091 #20378]  INFO -- : ----------------------------------------------
+I, [2020-04-01T07:55:36.921196 #20378]  INFO -- : EmployeesControllerTest: test_should_get_index
+I, [2020-04-01T07:55:36.921266 #20378]  INFO -- : ----------------------------------------------
+D, [2020-04-01T07:55:36.922312 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.923919 #20378] DEBUG -- :   [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "053585501"], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.925611 #20378] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "053585501"], ["date_of_birth", "2001-04-01"], ["phone", "2612031748"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T07:55:36.927347 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T07:55:36.928534 #20378]  INFO -- : Started GET "/employees" for 127.0.0.1 at 2020-04-01 07:55:36 +0000
+I, [2020-04-01T07:55:36.929474 #20378]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-01T07:55:36.931591 #20378]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+I, [2020-04-01T07:55:36.932338 #20378]  INFO -- :   Rendered employees/index.html.erb within layouts/application (0.4ms)
+I, [2020-04-01T07:55:36.933398 #20378]  INFO -- : Completed 200 OK in 4ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+D, [2020-04-01T07:55:36.935920 #20378] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+D, [2020-04-01T07:55:36.936618 #20378] DEBUG -- :   [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+I, [2020-04-01T07:55:36.936979 #20378]  INFO -- : --------------------------------------------
+I, [2020-04-01T07:55:36.937064 #20378]  INFO -- : EmployeesControllerTest: test_should_get_new
+I, [2020-04-01T07:55:36.937133 #20378]  INFO -- : --------------------------------------------
+D, [2020-04-01T07:55:36.938142 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+D, [2020-04-01T07:55:36.939704 #20378] DEBUG -- :   [1m[36mEmployee Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "employees" WHERE "employees"."ssn" = ? LIMIT ?[0m  [["ssn", "052427933"], ["LIMIT", 1]]
+D, [2020-04-01T07:55:36.941282 #20378] DEBUG -- :   [1m[36mEmployee Create (0.2ms)[0m  [1m[32mINSERT INTO "employees" ("first_name", "last_name", "ssn", "date_of_birth", "phone", "role", "active") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["first_name", "Ed"], ["last_name", "Gruberman"], ["ssn", "052427933"], ["date_of_birth", "2001-04-01"], ["phone", "5305791373"], ["role", "employee"], ["active", 1]]
+D, [2020-04-01T07:55:36.942657 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+I, [2020-04-01T07:55:36.943782 #20378]  INFO -- : Started GET "/employees/new" for 127.0.0.1 at 2020-04-01 07:55:36 +0000
+I, [2020-04-01T07:55:36.944795 #20378]  INFO -- : Processing by EmployeesController#new as HTML
+I, [2020-04-01T07:55:36.945857 #20378]  INFO -- :   Rendering employees/new.html.erb within layouts/application
+I, [2020-04-01T07:55:36.946325 #20378]  INFO -- :   Rendered employees/new.html.erb within layouts/application (0.1ms)
+I, [2020-04-01T07:55:36.947362 #20378]  INFO -- : Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+D, [2020-04-01T07:55:36.949938 #20378] DEBUG -- :   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
