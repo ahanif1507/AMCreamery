@@ -1,6 +1,6 @@
 class StoresController < ApplicationController
   
-  before_action :set_store, only: [:edit, :update]
+  before_action :set_store, only: [:edit, :update, :show]
   
   def index
 		@active_stores = Store.active
