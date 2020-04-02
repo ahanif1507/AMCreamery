@@ -1,2 +1,63 @@
-<h1>Assignments#index</h1>
-<p>Find me in app/views/assignments/index.html.erb</p>
+ 
+<% if @current_assignemnts.nil? %>
+  <h4>There are no current assignments at this time</h4>
+<% else %>
+<h4>Current Assignments</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Employee Name</th>
+      <th>Store Name</th>
+      <th>Dates</th>
+      <th class="align_center">Options</th>
+    </thead>
+    <% for assignment in @current_assignemnts %>
+      <tr>
+        <td><%= assignment.employee.name %></td>
+        <td><%= assignment.store.name %></td>
+         <td><%= assignment.start_date.strftime("%m/%d/%Y") %> - Present %></td>
+        <td class="align_center">
+          <%= link_to terminate_assignement_path(assignment) do %>
+              <i class="material-icons">delete</i>
+          <% end %>
+          &nbsp;&nbsp;&nbsp;&nbsp; 
+       
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <br />
+  <%= will_paginate @active_stores, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
+<% end %>
+
+<% if @past_assignemnts.nil? %>
+  <h4>There are no past assignments at this time</h4>
+<% else %>
+   <h4>Past Assignments</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Employee Name</th>
+      <th>Store Name</th>
+      <th>Dates</th>
+      <th class="align_center">Options</th>
+    </thead>
+    <% for assignment in @current_assignemnts %>
+      <tr>
+        <td><%= assignment.employee.name %></td>
+        <td><%= assignment.store.name %></td>
+         <td><%= assignment.start_date.strftime("%m/%d/%Y") %> - <%= assignment.end_date.strftime("%m/%d/%Y") %></td>
+        <td class="align_center">
+          &nbsp;&nbsp;&nbsp;&nbsp; 
+       
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <br />
+  <%= will_paginate @inactive_stores, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
+  
+<% end %>
+<p>&nbsp;</p>
+
+<p><strong>
+<%= link_to "Add a New Assignment", new_assignment_path, class: 'waves-effect waves-light btn' %> 
+</strong></p>

@@ -1,0 +1,714 @@
+# Logfile created on 2020-04-01 12:42:46 +0000 by logger.rb/v1.4.2
+I, [2020-04-01T12:42:46.170427 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 12:42:46 +0000
+I, [2020-04-01T12:42:46.172503 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+D, [2020-04-01T12:42:46.198647 #8030] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-01T12:42:46.198891 #8030] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-01T12:42:46.219465 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T12:42:46.229863 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T12:42:46.231405 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.1ms)
+I, [2020-04-01T12:42:46.234117 #8030]  INFO -- : Completed 200 OK in 14ms (Views: 7.5ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T12:43:01.664394 #8030]  INFO -- : Started GET "/privacy" for 182.185.146.90 at 2020-04-01 12:43:01 +0000
+I, [2020-04-01T12:43:01.665166 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+F, [2020-04-01T12:43:01.666987 #8030] FATAL -- :   
+F, [2020-04-01T12:43:01.667160 #8030] FATAL -- : ActionController::RoutingError (No route matches [GET] "/privacy"):
+F, [2020-04-01T12:43:01.667321 #8030] FATAL -- :   
+F, [2020-04-01T12:43:01.667607 #8030] FATAL -- : actionpack (5.2.3) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+rack-contrib (2.1.0) lib/rack/contrib/response_headers.rb:17:in `call'
+meta_request (0.7.2) lib/meta_request/middlewares/headers.rb:16:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.3) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.3) lib/rails/rack/logger.rb:28:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.3) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.2) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.3) lib/rails/engine.rb:524:in `call'
+puma (3.11.0) lib/puma/configuration.rb:225:in `call'
+puma (3.11.0) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.0) lib/puma/server.rb:438:in `process_client'
+puma (3.11.0) lib/puma/server.rb:302:in `block in run'
+puma (3.11.0) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+I, [2020-04-01T12:43:01.703196 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+I, [2020-04-01T12:43:01.723866 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+I, [2020-04-01T12:43:01.725197 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+I, [2020-04-01T12:43:01.767333 #8030]  INFO -- :   Rendered collection of /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/routes/_route.html.erb [58 times] (20.7ms)
+I, [2020-04-01T12:43:01.793077 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.0ms)
+I, [2020-04-01T12:43:01.812887 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+I, [2020-04-01T12:43:01.814275 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+I, [2020-04-01T12:43:01.814550 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (111.2ms)
+I, [2020-04-01T12:43:37.277435 #8030]  INFO -- : Started GET "/home/privacy" for 182.185.146.90 at 2020-04-01 12:43:37 +0000
+I, [2020-04-01T12:43:37.279039 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T12:43:37.284142 #8030]  INFO -- : Processing by HomeController#privacy as HTML
+I, [2020-04-01T12:43:37.290114 #8030]  INFO -- :   Rendering home/privacy.html.erb within layouts/application
+I, [2020-04-01T12:43:37.291821 #8030]  INFO -- :   Rendered home/privacy.html.erb within layouts/application (1.1ms)
+I, [2020-04-01T12:43:37.294852 #8030]  INFO -- : Completed 200 OK in 10ms (Views: 6.4ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T12:45:22.922939 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 12:45:22 +0000
+I, [2020-04-01T12:45:22.924099 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T12:45:22.927042 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T12:45:22.931071 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T12:45:22.932211 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2020-04-01T12:45:22.934300 #8030]  INFO -- : Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T12:53:31.665480 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 12:53:31 +0000
+I, [2020-04-01T12:53:31.666529 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T12:53:31.671628 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T12:53:31.675422 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T12:53:31.676493 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2020-04-01T12:53:33.068743 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (7.8ms)
+I, [2020-04-01T12:53:33.073908 #8030]  INFO -- : Completed 500  in 1402ms (ActiveRecord: 0.0ms)
+
+
+F, [2020-04-01T12:53:33.087191 #8030] FATAL -- :   
+F, [2020-04-01T12:53:33.087385 #8030] FATAL -- : ActionView::Template::Error (The asset "logos/logo_v2_80x80.png" is not present in the asset pipeline.):
+F, [2020-04-01T12:53:33.089086 #8030] FATAL -- :     1: <div class="row valign-wrapper" id="topbar">
+    2:   <div class="col s1">
+    3:     <%= link_to(image_tag('logos/logo_v2_80x80.png'), home_path) %>
+    4:   </div>
+    5:   <div class="col s10">
+    6:     <h2>Pittsburgh Animal Treatment Services</h2>
+F, [2020-04-01T12:53:33.089289 #8030] FATAL -- :   
+F, [2020-04-01T12:53:33.089493 #8030] FATAL -- : app/views/partials/_topbar.html.erb:3:in `_app_views_partials__topbar_html_erb__1371594001755007443_26240'
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___1996590384630037187_26060'
+I, [2020-04-01T12:53:33.252430 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+I, [2020-04-01T12:53:33.271456 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+I, [2020-04-01T12:53:33.275944 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
+I, [2020-04-01T12:53:33.293461 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+I, [2020-04-01T12:53:33.295483 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+I, [2020-04-01T12:53:33.310512 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+I, [2020-04-01T12:53:33.311439 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+I, [2020-04-01T12:53:33.311730 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.1ms)
+I, [2020-04-01T13:01:03.346528 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:01:03 +0000
+I, [2020-04-01T13:01:03.348261 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:01:03.352687 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:01:03.356569 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:01:03.357793 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2020-04-01T13:01:03.428042 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (7.0ms)
+I, [2020-04-01T13:01:03.430923 #8030]  INFO -- : Completed 500  in 77ms (ActiveRecord: 0.0ms)
+
+
+F, [2020-04-01T13:01:03.437556 #8030] FATAL -- :   
+F, [2020-04-01T13:01:03.437808 #8030] FATAL -- : ActionView::Template::Error (The asset "logos/logo_v2_80x80.png" is not present in the asset pipeline.):
+F, [2020-04-01T13:01:03.438083 #8030] FATAL -- :     1: <div class="row valign-wrapper" id="topbar">
+    2:   <div class="col s1">
+    3:     <%= link_to(image_tag('logos/logo_v2_80x80.png'), home_path) %>
+    4:   </div>
+    5:   <div class="col s10">
+    6:     <h2>Pittsburgh Animal Treatment Services</h2>
+F, [2020-04-01T13:01:03.438307 #8030] FATAL -- :   
+F, [2020-04-01T13:01:03.438489 #8030] FATAL -- : app/views/partials/_topbar.html.erb:3:in `_app_views_partials__topbar_html_erb__1371594001755007443_26740'
+app/views/layouts/application.html.erb:15:in `_app_views_layouts_application_html_erb___1996590384630037187_26720'
+I, [2020-04-01T13:01:03.606177 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+I, [2020-04-01T13:01:03.621738 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+I, [2020-04-01T13:01:03.626065 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.0ms)
+I, [2020-04-01T13:01:03.640872 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+I, [2020-04-01T13:01:03.642881 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+I, [2020-04-01T13:01:03.658129 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+I, [2020-04-01T13:01:03.659238 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+I, [2020-04-01T13:01:03.659631 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.2ms)
+I, [2020-04-01T13:18:40.258956 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:18:40 +0000
+I, [2020-04-01T13:18:40.260512 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:18:40.267514 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:18:40.272166 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:18:40.273433 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2020-04-01T13:18:40.276205 #8030]  INFO -- : Completed 500  in 8ms (ActiveRecord: 0.0ms)
+
+
+F, [2020-04-01T13:18:40.280282 #8030] FATAL -- :   
+F, [2020-04-01T13:18:40.280423 #8030] FATAL -- : SyntaxError (/home/ubuntu/67-272_2020_Creamery_P3_Starter/app/views/layouts/application.html.erb:34: syntax error, unexpected `ensure', expecting end-of-input
+          ensure
+          ^~~~~~
+):
+F, [2020-04-01T13:18:40.280530 #8030] FATAL -- :   
+F, [2020-04-01T13:18:40.280633 #8030] FATAL -- : app/views/layouts/application.html.erb:34: syntax error, unexpected `ensure', expecting end-of-input
+app/views/layouts/application.html.erb:34: syntax error, unexpected `ensure', expecting end-of-input
+I, [2020-04-01T13:18:40.411774 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+I, [2020-04-01T13:18:40.430821 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+I, [2020-04-01T13:18:40.434816 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.7ms)
+I, [2020-04-01T13:18:40.454574 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+I, [2020-04-01T13:18:40.456710 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+I, [2020-04-01T13:18:40.473366 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+I, [2020-04-01T13:18:40.474332 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+I, [2020-04-01T13:18:40.474606 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.6ms)
+I, [2020-04-01T13:19:13.621195 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:19:13 +0000
+I, [2020-04-01T13:19:13.622180 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:19:13.624455 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:19:13.627898 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:19:13.628766 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.5ms)
+I, [2020-04-01T13:19:13.812334 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (100.2ms)
+I, [2020-04-01T13:19:13.980816 #8030]  INFO -- : Completed 500  in 356ms (ActiveRecord: 0.0ms)
+
+
+F, [2020-04-01T13:19:13.984493 #8030] FATAL -- :   
+F, [2020-04-01T13:19:13.984649 #8030] FATAL -- : ActionView::Template::Error (undefined method `logged_in?' for #<#<Class:0x00007f5a38228d48>:0x00007f5a386e2258>
+Did you mean?  logger?):
+F, [2020-04-01T13:19:13.984910 #8030] FATAL -- :     13:   <body>
+    14:     <!-- Partials for the topbar and navigation -->
+    15:     <%= render :partial => "partials/topbar" %>
+    16:     <% if logged_in? %>
+    17:       <%= render :partial => "partials/nav" %>
+    18:     <% else %>
+    19:       <%= render :partial => "partials/nav_guest" %>
+F, [2020-04-01T13:19:13.985036 #8030] FATAL -- :   
+F, [2020-04-01T13:19:13.985153 #8030] FATAL -- : app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1996590384630037187_27600'
+I, [2020-04-01T13:19:14.072383 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+I, [2020-04-01T13:19:14.087452 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+I, [2020-04-01T13:19:14.090912 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.2ms)
+I, [2020-04-01T13:19:14.105574 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+I, [2020-04-01T13:19:14.107460 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+I, [2020-04-01T13:19:14.122599 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+I, [2020-04-01T13:19:14.123582 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+I, [2020-04-01T13:19:14.123883 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.3ms)
+I, [2020-04-01T13:20:13.844316 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:20:13 +0000
+I, [2020-04-01T13:20:13.845385 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:20:13.848342 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:20:13.852354 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:20:13.853578 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2020-04-01T13:20:13.896438 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (9.2ms)
+I, [2020-04-01T13:20:14.316619 #8030]  INFO -- :   Rendered partials/_nav.html.erb (418.6ms)
+I, [2020-04-01T13:20:14.317791 #8030]  INFO -- : Completed 500  in 469ms (ActiveRecord: 0.0ms)
+
+
+F, [2020-04-01T13:20:14.321269 #8030] FATAL -- :   
+F, [2020-04-01T13:20:14.321397 #8030] FATAL -- : ActionView::Template::Error (undefined local variable or method `owners_path' for #<#<Class:0x00007f5a38228d48>:0x00007f5a1c3a6b50>
+Did you mean?  stores_path):
+F, [2020-04-01T13:20:14.321615 #8030] FATAL -- :     1: <nav id="nav">
+    2:   <div class="container">
+    3:     <ul class="left hide-on-med-and-down">
+    4:       <li><%= link_to 'Owners', owners_path %></li>
+    5:       <li><%= link_to 'Pets', pets_path %></li>
+    6:       <li><%= link_to 'Visits', visits_path %></li>
+    7:       <li><%= link_to 'Medicines', medicines_path %></li>
+F, [2020-04-01T13:20:14.321743 #8030] FATAL -- :   
+F, [2020-04-01T13:20:14.321853 #8030] FATAL -- : app/views/partials/_nav.html.erb:4:in `_app_views_partials__nav_html_erb___2765372459564553646_28280'
+app/views/layouts/application.html.erb:16:in `_app_views_layouts_application_html_erb___1996590384630037187_28200'
+I, [2020-04-01T13:20:14.446960 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+I, [2020-04-01T13:20:14.462560 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+I, [2020-04-01T13:20:14.468123 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.2ms)
+I, [2020-04-01T13:20:14.483880 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+I, [2020-04-01T13:20:14.486305 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+I, [2020-04-01T13:20:14.501483 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+I, [2020-04-01T13:20:14.502533 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+I, [2020-04-01T13:20:14.503023 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.9ms)
+I, [2020-04-01T13:21:38.526273 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:21:38 +0000
+I, [2020-04-01T13:21:38.528262 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:21:38.531520 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:21:38.535995 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:21:38.537614 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.2ms)
+I, [2020-04-01T13:21:38.585702 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (2.3ms)
+I, [2020-04-01T13:21:38.588539 #8030]  INFO -- :   Rendered partials/_nav.html.erb (1.4ms)
+I, [2020-04-01T13:21:38.592510 #8030]  INFO -- :   Rendered partials/_footer.html.erb (1.3ms)
+I, [2020-04-01T13:21:38.595765 #8030]  INFO -- : Completed 200 OK in 63ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:21:39.061101 #8030]  INFO -- : Started GET "/assets/application.self-e230c60049839f7d816a5adb6043399cbe9c25db633a320be2bdc96c01c866f7.css?body=1" for 182.185.146.90 at 2020-04-01 13:21:39 +0000
+I, [2020-04-01T13:21:39.061680 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:21:39.070853 #8030]  INFO -- : Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 182.185.146.90 at 2020-04-01 13:21:39 +0000
+I, [2020-04-01T13:21:39.071645 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:21:39.504533 #8030]  INFO -- : Started GET "/assets/rails-ujs.self-2b8935521e2301b06b45bd42e623eb0c0acf76c3a6ba383b7429c6a2884f8c23.js?body=1" for 182.185.146.90 at 2020-04-01 13:21:39 +0000
+I, [2020-04-01T13:21:39.506352 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:21:39.954638 #8030]  INFO -- : Started GET "/assets/assignments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 182.185.146.90 at 2020-04-01 13:21:39 +0000
+I, [2020-04-01T13:21:39.955595 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:21:39.976987 #8030]  INFO -- : Started GET "/assets/action_cable.self-69fddfcddf4fdef9828648f9330d6ce108b93b82b0b8d3affffc59a114853451.js?body=1" for 182.185.146.90 at 2020-04-01 13:21:39 +0000
+I, [2020-04-01T13:21:39.979891 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:21:39.982988 #8030]  INFO -- : Started GET "/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" for 182.185.146.90 at 2020-04-01 13:21:39 +0000
+I, [2020-04-01T13:21:39.984217 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:21:40.015444 #8030]  INFO -- : Started GET "/assets/employees.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 182.185.146.90 at 2020-04-01 13:21:40 +0000
+I, [2020-04-01T13:21:40.016552 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:21:40.408607 #8030]  INFO -- : Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 182.185.146.90 at 2020-04-01 13:21:40 +0000
+I, [2020-04-01T13:21:40.410093 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:21:40.420804 #8030]  INFO -- : Started GET "/assets/stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 182.185.146.90 at 2020-04-01 13:21:40 +0000
+I, [2020-04-01T13:21:40.422665 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:21:40.466984 #8030]  INFO -- : Started GET "/assets/application.self-12be097b9a2442b0b6cdcb5146d1d63c00abcde3675ff34d1de6126cb13e6714.js?body=1" for 182.185.146.90 at 2020-04-01 13:21:40 +0000
+I, [2020-04-01T13:21:40.467520 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:21:40.486170 #8030]  INFO -- : Started GET "/assets/logos/logo_80x80-319c5d5ac66e0f53979a1eb9fe45b354a7db12800987708f28e65cf270950d3c.png" for 182.185.146.90 at 2020-04-01 13:21:40 +0000
+I, [2020-04-01T13:21:40.486756 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:24:10.634028 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:24:10 +0000
+I, [2020-04-01T13:24:10.635399 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:24:10.638456 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:24:10.642723 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:24:10.644155 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2020-04-01T13:24:10.657370 #8030]  INFO -- : Completed 500  in 18ms (ActiveRecord: 0.0ms)
+
+
+F, [2020-04-01T13:24:10.662189 #8030] FATAL -- :   
+F, [2020-04-01T13:24:10.664739 #8030] FATAL -- : ActionView::Template::Error (couldn't find file 'overrides' with type 'text/css'
+Checked in these paths: 
+  /home/ubuntu/67-272_2020_Creamery_P3_Starter/app/assets/config
+  /home/ubuntu/67-272_2020_Creamery_P3_Starter/app/assets/images
+  /home/ubuntu/67-272_2020_Creamery_P3_Starter/app/assets/javascripts
+  /home/ubuntu/67-272_2020_Creamery_P3_Starter/app/assets/stylesheets
+  /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/jquery-ui-rails-6.0.1/app/assets/images
+  /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/jquery-ui-rails-6.0.1/app/assets/javascripts
+  /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/jquery-ui-rails-6.0.1/app/assets/stylesheets
+  /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/jquery-rails-4.3.1/vendor/assets/javascripts
+  /home/ubuntu/.bundle/ruby/2.7.0/materialize-form-57aba24dbf1e/app/assets/javascripts
+  /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/best_in_place-3.0.3/lib/assets/javascripts
+  /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/best_in_place-3.0.3/vendor/assets/javascripts
+  /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/coffee-rails-4.2.2/lib/assets/javascripts
+  /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actioncable-5.2.3/lib/assets/compiled
+  /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activestorage-5.2.3/app/assets/javascripts
+  /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionview-5.2.3/lib/assets/compiled
+  /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/turbolinks-source-5.2.0/lib/assets/javascripts
+  /home/ubuntu/67-272_2020_Creamery_P3_Starter/node_modules
+  /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/materialize-sass-1.0.0/assets/stylesheets
+  /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/materialize-sass-1.0.0/assets/javascripts
+  /home/ubuntu/.bundle/ruby/2.7.0/materialize-form-57aba24dbf1e/app/assets/stylesheets
+  /home/ubuntu/.bundle/ruby/2.7.0/materialize-form-57aba24dbf1e/app/assets/javascripts
+  /home/ubuntu/.bundle/ruby/2.7.0/materialize-form-57aba24dbf1e/app/assets/fonts
+  /home/ubuntu/.bundle/ruby/2.7.0/materialize-form-57aba24dbf1e/app/assets/images):
+F, [2020-04-01T13:24:10.665759 #8030] FATAL -- :     4:     <title>A&M Creamery</title>
+    5:     <%= csrf_meta_tags %>
+    6: 
+    7:     <%= stylesheet_link_tag 'application', media: 'all' %>
+    8:     <%= javascript_include_tag 'application' %>
+    9:     <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+   10:     <%= stylesheet_link_tag "https://fonts.googleapis.com/css?family=Bitter|Josefin+Sans|Nunito|Varela+Round" %>
+F, [2020-04-01T13:24:10.666036 #8030] FATAL -- :   
+F, [2020-04-01T13:24:10.666396 #8030] FATAL -- : app/assets/stylesheets/application.scss:14
+app/views/layouts/application.html.erb:7:in `_app_views_layouts_application_html_erb___1996590384630037187_29120'
+I, [2020-04-01T13:24:10.845003 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+I, [2020-04-01T13:24:10.862199 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+I, [2020-04-01T13:24:10.872954 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.5ms)
+I, [2020-04-01T13:24:10.891244 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+I, [2020-04-01T13:24:10.893484 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+I, [2020-04-01T13:24:10.911131 #8030]  INFO -- :   Rendering /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+I, [2020-04-01T13:24:10.912305 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+I, [2020-04-01T13:24:10.912650 #8030]  INFO -- :   Rendered /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/actionpack-5.2.3/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.4ms)
+I, [2020-04-01T13:24:53.526072 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:24:53 +0000
+I, [2020-04-01T13:24:53.526933 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:24:53.529874 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:24:53.533736 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:24:53.534797 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2020-04-01T13:24:56.853357 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (2.3ms)
+I, [2020-04-01T13:24:56.855979 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:24:56.859006 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-01T13:24:56.861122 #8030]  INFO -- : Completed 200 OK in 3330ms (Views: 3327.4ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:24:57.331986 #8030]  INFO -- : Started GET "/assets/application.self-90ae7cb823ef33bfb06eb79b4687ce39222577d8384119c386ac357db6e541fe.css?body=1" for 182.185.146.90 at 2020-04-01 13:24:57 +0000
+I, [2020-04-01T13:24:57.332854 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:25:19.628661 #8030]  INFO -- : Started GET "/employees" for 182.185.146.90 at 2020-04-01 13:25:19 +0000
+I, [2020-04-01T13:25:19.629549 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:25:19.669400 #8030]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-01T13:25:19.685570 #8030]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+I, [2020-04-01T13:25:19.686338 #8030]  INFO -- :   Rendered employees/index.html.erb within layouts/application (0.3ms)
+I, [2020-04-01T13:25:19.718838 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.8ms)
+I, [2020-04-01T13:25:19.720513 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.4ms)
+I, [2020-04-01T13:25:19.722199 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.7ms)
+I, [2020-04-01T13:25:19.723625 #8030]  INFO -- : Completed 200 OK in 54ms (Views: 39.2ms | ActiveRecord: 0.6ms)
+
+
+I, [2020-04-01T13:28:59.645318 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:28:59 +0000
+I, [2020-04-01T13:28:59.649195 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:28:59.652729 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:28:59.657226 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:28:59.658405 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2020-04-01T13:28:59.701546 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.9ms)
+I, [2020-04-01T13:28:59.703433 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.6ms)
+I, [2020-04-01T13:28:59.705480 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.8ms)
+I, [2020-04-01T13:28:59.707064 #8030]  INFO -- : Completed 200 OK in 54ms (Views: 50.9ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:31:15.177439 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:31:15 +0000
+I, [2020-04-01T13:31:15.180358 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:15.183915 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:31:15.191513 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:31:15.193105 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2020-04-01T13:31:15.585592 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.6ms)
+I, [2020-04-01T13:31:15.587684 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:31:15.589597 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-01T13:31:15.591206 #8030]  INFO -- : Completed 200 OK in 405ms (Views: 401.7ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:31:16.067689 #8030]  INFO -- : Started GET "/assets/materialize/cash.self-3fb8ba40ef69d4f09dd3f6202d25f2bdcb4e5bd2c7cfab9c97a40c17633e03fa.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:16 +0000
+I, [2020-04-01T13:31:16.068300 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:16.088044 #8030]  INFO -- : Started GET "/assets/materialize/component.self-16d42c8d4b8ff5f3db217dbd3c53dbe177150dbb7d8b3a5bf069e461f5c0b6d7.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:16 +0000
+I, [2020-04-01T13:31:16.088500 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:16.565312 #8030]  INFO -- : Started GET "/assets/materialize/global.self-261956099793ab074ae1db119d68e1c1388b1ae8dc8aecce18165834b768434b.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:16 +0000
+I, [2020-04-01T13:31:16.566060 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:16.936195 #8030]  INFO -- : Started GET "/assets/materialize/anime.min.self-f7a6e6dd4948f87f31fd7fdd3a47103f2a5827479364c13213dbc9f62f300669.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:16 +0000
+I, [2020-04-01T13:31:16.936819 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:16.966801 #8030]  INFO -- : Started GET "/assets/materialize/collapsible.self-fdd54f0576c46f2e1888184162a5d442fbd835e745a3747459e910465083796a.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:16 +0000
+I, [2020-04-01T13:31:16.967481 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:17.005736 #8030]  INFO -- : Started GET "/assets/materialize/modal.self-51e7fbbc3b46c0e5b9c87e3b03095f645817087951ed47bc73a4b8f6521b0563.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:17 +0000
+I, [2020-04-01T13:31:17.006190 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:17.009600 #8030]  INFO -- : Started GET "/assets/materialize/dropdown.self-f651a43ef18f0c4c3c980121e006c6aabdb354fe1d465fbc797b0ea5da2f6e1d.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:17 +0000
+I, [2020-04-01T13:31:17.010273 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:17.025964 #8030]  INFO -- : Started GET "/assets/materialize/materialbox.self-909af6b7c8785aa471df318db3228f3eefc45534eae3ecfe290546d7c6211462.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:17 +0000
+I, [2020-04-01T13:31:17.026515 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:17.037341 #8030]  INFO -- : Started GET "/assets/materialize/parallax.self-c5c54a7e094640591becb4782d5c6c5f221ec7b669a73086f4021cc1a0bfece0.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:17 +0000
+I, [2020-04-01T13:31:17.038226 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:17.439272 #8030]  INFO -- : Started GET "/assets/materialize/tabs.self-6c64239da30a110944ae0872dcf25d0416e3b0e647ce58de0945b183a65616d6.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:17 +0000
+I, [2020-04-01T13:31:17.440390 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:17.523931 #8030]  INFO -- : Started GET "/assets/materialize/tooltip.self-a7ea47095813cb6a1519c7a665e08a520eb4a568707ac928da5be81ad7348f13.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:17 +0000
+I, [2020-04-01T13:31:17.524422 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:17.542601 #8030]  INFO -- : Started GET "/assets/materialize/waves.self-ed24cac84d0f66808ff978810735b871f814c2bcf592cf9ccdf6b2bcdf8f5ba7.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:17 +0000
+I, [2020-04-01T13:31:17.543680 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:17.821706 #8030]  INFO -- : Started GET "/assets/materialize/toasts.self-c3257dd138db5849f3af2ab8e941a9d5fa30cf4948abaa09939dd3603e989c54.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:17 +0000
+I, [2020-04-01T13:31:17.823153 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:17.906092 #8030]  INFO -- : Started GET "/assets/materialize/sidenav.self-6c66ac3f3314132b57b6a8121ecf1db0abeaf9001681184087df24e39b5044d3.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:17 +0000
+I, [2020-04-01T13:31:17.907092 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:17.944275 #8030]  INFO -- : Started GET "/assets/materialize/autocomplete.self-5cf5bfd9d5d4752ca280ed43a49564e7b66da08cdbe52f5ef86b89f3a69a8e8b.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:17 +0000
+I, [2020-04-01T13:31:17.945281 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:17.952674 #8030]  INFO -- : Started GET "/assets/materialize/scrollspy.self-f53de21bf5e049b8d0fa89b3170175c7386e4d3bd47aff01a481c97ee86b092d.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:17 +0000
+I, [2020-04-01T13:31:17.954030 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:17.984021 #8030]  INFO -- : Started GET "/assets/materialize/forms.self-cf66ce19872b7d1a949e0e027fbb6019c788478e2a860248761aa6936f63e775.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:17 +0000
+I, [2020-04-01T13:31:17.985010 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:18.009484 #8030]  INFO -- : Started GET "/assets/materialize/slider.self-9dab4424c7df0dcd035feb46a706e66267cb301958da742c3362f210d5eea5eb.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:18 +0000
+I, [2020-04-01T13:31:18.010546 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:18.278020 #8030]  INFO -- : Started GET "/assets/materialize/cards.self-2e6a5a4e09ea07f0ddd219098cdf10c9ec56e501b7c94dfb39402a00a011cd25.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:18 +0000
+I, [2020-04-01T13:31:18.278572 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:18.387732 #8030]  INFO -- : Started GET "/assets/materialize/chips.self-6d72856d7ea5390b8cb8bf7848a22d733611ef1a0ba57c24ba2fe6615d9fbba4.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:18 +0000
+I, [2020-04-01T13:31:18.388343 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:18.402539 #8030]  INFO -- : Started GET "/assets/materialize/pushpin.self-26f9db266bc16ce11ffeac03cfd0a10341dc79eabb671161314c829d7e754fcf.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:18 +0000
+I, [2020-04-01T13:31:18.403588 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:18.447407 #8030]  INFO -- : Started GET "/assets/materialize/buttons.self-e02b8d334ae505070cbb467500f0f4faca1ef008a860390a3b1e56b96fc025b0.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:18 +0000
+I, [2020-04-01T13:31:18.448432 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:18.456608 #8030]  INFO -- : Started GET "/assets/materialize/datepicker.self-4409f15553f686fb6167467c4ef704b423135cd5f895ce3405091a4f3d450f9e.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:18 +0000
+I, [2020-04-01T13:31:18.457114 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:18.483611 #8030]  INFO -- : Started GET "/assets/materialize/timepicker.self-0e4b5d1e8c7fc96e807f292fba542f3a19d2072454b5ea813968efdefc5bb70d.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:18 +0000
+I, [2020-04-01T13:31:18.484308 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:18.725932 #8030]  INFO -- : Started GET "/assets/materialize/characterCounter.self-ff1c9f4d6d8280b64b2c4fd7ddf37e9f6996eeefa7675eefc507c0b9f2621a1e.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:18 +0000
+I, [2020-04-01T13:31:18.726991 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:18.855796 #8030]  INFO -- : Started GET "/assets/materialize/carousel.self-67caf6f6ed54e4284e01f92650d915a3fef2d4faeada4948d9771399ac2c75ea.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:18 +0000
+I, [2020-04-01T13:31:18.856419 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:18.882309 #8030]  INFO -- : Started GET "/assets/materialize/tapTarget.self-84af6a5050616c77c1a27c272ce9c9e433215d393fdd8f678881422a8d794fc9.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:18 +0000
+I, [2020-04-01T13:31:18.883456 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:18.919556 #8030]  INFO -- : Started GET "/assets/materialize/select.self-49f3d15447ef926fd6dd40f4231a791f2e000bd000c7dde1dd69c1a9fdcf4f69.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:18 +0000
+I, [2020-04-01T13:31:18.920559 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:18.959269 #8030]  INFO -- : Started GET "/assets/materialize/range.self-2edaea2cdeecef2d29edaa280a2fffbe275f4b7e5b842bbed15c16d11db91d70.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:18 +0000
+I, [2020-04-01T13:31:18.960646 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:19.198385 #8030]  INFO -- : Started GET "/assets/materialize-sprockets.self-a0bdb7e71846a959dad4890557156530d5b836126491ac853ac3c629c04c9030.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:19 +0000
+I, [2020-04-01T13:31:19.199043 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:19.330695 #8030]  INFO -- : Started GET "/assets/materialize-form.self-a1bf000dd2cf2f4b28e701d4625b1d36adf60e2a68124688869cfd2bd951bc85.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:19 +0000
+I, [2020-04-01T13:31:19.331671 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:19.353098 #8030]  INFO -- : Started GET "/assets/application.self-6905bfa38aab1d2d523c6a8aeb6bd4a6bd5338eb82bfad3b2edcc4606705f4f6.js?body=1" for 182.185.146.90 at 2020-04-01 13:31:19 +0000
+I, [2020-04-01T13:31:19.353818 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:49.989705 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:31:49 +0000
+I, [2020-04-01T13:31:49.992459 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:49.996614 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:31:50.002567 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:31:50.003885 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2020-04-01T13:31:50.145252 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.6ms)
+I, [2020-04-01T13:31:50.146905 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.6ms)
+I, [2020-04-01T13:31:50.148621 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-01T13:31:50.149883 #8030]  INFO -- : Completed 200 OK in 153ms (Views: 149.7ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:31:51.516496 #8030]  INFO -- : Started GET "/home/about" for 182.185.146.90 at 2020-04-01 13:31:51 +0000
+I, [2020-04-01T13:31:51.517330 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:51.518919 #8030]  INFO -- : Processing by HomeController#about as HTML
+I, [2020-04-01T13:31:51.521975 #8030]  INFO -- :   Rendering home/about.html.erb within layouts/application
+I, [2020-04-01T13:31:51.522708 #8030]  INFO -- :   Rendered home/about.html.erb within layouts/application (0.4ms)
+I, [2020-04-01T13:31:51.626995 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (2.3ms)
+I, [2020-04-01T13:31:51.628682 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:31:51.630334 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-01T13:31:51.631581 #8030]  INFO -- : Completed 200 OK in 112ms (Views: 110.2ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:31:54.945262 #8030]  INFO -- : Started GET "/home/contact" for 182.185.146.90 at 2020-04-01 13:31:54 +0000
+I, [2020-04-01T13:31:54.946102 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:54.947782 #8030]  INFO -- : Processing by HomeController#contact as HTML
+I, [2020-04-01T13:31:54.951020 #8030]  INFO -- :   Rendering home/contact.html.erb within layouts/application
+I, [2020-04-01T13:31:54.951981 #8030]  INFO -- :   Rendered home/contact.html.erb within layouts/application (0.6ms)
+I, [2020-04-01T13:31:55.056218 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.6ms)
+I, [2020-04-01T13:31:55.057810 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:31:55.059611 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.7ms)
+I, [2020-04-01T13:31:55.060870 #8030]  INFO -- : Completed 200 OK in 113ms (Views: 110.6ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:31:58.124430 #8030]  INFO -- : Started GET "/home/privacy" for 182.185.146.90 at 2020-04-01 13:31:58 +0000
+I, [2020-04-01T13:31:58.125432 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:31:58.127084 #8030]  INFO -- : Processing by HomeController#privacy as HTML
+I, [2020-04-01T13:31:58.132488 #8030]  INFO -- :   Rendering home/privacy.html.erb within layouts/application
+I, [2020-04-01T13:31:58.134293 #8030]  INFO -- :   Rendered home/privacy.html.erb within layouts/application (0.6ms)
+I, [2020-04-01T13:31:58.249884 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.5ms)
+I, [2020-04-01T13:31:58.251752 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:31:58.253627 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.7ms)
+I, [2020-04-01T13:31:58.254883 #8030]  INFO -- : Completed 200 OK in 127ms (Views: 125.3ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:32:02.890561 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:32:02 +0000
+I, [2020-04-01T13:32:02.891884 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:32:02.894287 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:32:02.898360 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:32:02.899605 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2020-04-01T13:32:03.012963 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.9ms)
+I, [2020-04-01T13:32:03.014803 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:32:03.016737 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.7ms)
+I, [2020-04-01T13:32:03.018322 #8030]  INFO -- : Completed 200 OK in 124ms (Views: 121.0ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:32:59.954099 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:32:59 +0000
+I, [2020-04-01T13:32:59.956572 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:32:59.961030 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:32:59.967267 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:32:59.969001 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.0ms)
+I, [2020-04-01T13:33:00.105391 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (2.0ms)
+I, [2020-04-01T13:33:00.106985 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:33:00.108849 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.7ms)
+I, [2020-04-01T13:33:00.110093 #8030]  INFO -- : Completed 200 OK in 149ms (Views: 145.6ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:33:07.150441 #8030]  INFO -- : Started GET "/employees" for 182.185.146.90 at 2020-04-01 13:33:07 +0000
+I, [2020-04-01T13:33:07.151506 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:33:07.153263 #8030]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-01T13:33:07.156995 #8030]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+I, [2020-04-01T13:33:07.157815 #8030]  INFO -- :   Rendered employees/index.html.erb within layouts/application (0.5ms)
+I, [2020-04-01T13:33:07.247993 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.3ms)
+I, [2020-04-01T13:33:07.249841 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.4ms)
+I, [2020-04-01T13:33:07.251373 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.5ms)
+I, [2020-04-01T13:33:07.252467 #8030]  INFO -- : Completed 200 OK in 99ms (Views: 96.3ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:33:09.138216 #8030]  INFO -- : Started GET "/assignments" for 182.185.146.90 at 2020-04-01 13:33:09 +0000
+I, [2020-04-01T13:33:09.139133 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:33:09.165965 #8030]  INFO -- : Processing by AssignmentsController#index as HTML
+I, [2020-04-01T13:33:09.178907 #8030]  INFO -- :   Rendering assignments/index.html.erb within layouts/application
+I, [2020-04-01T13:33:09.179843 #8030]  INFO -- :   Rendered assignments/index.html.erb within layouts/application (0.4ms)
+I, [2020-04-01T13:33:09.280894 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.5ms)
+I, [2020-04-01T13:33:09.282722 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:33:09.284690 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.7ms)
+I, [2020-04-01T13:33:09.286146 #8030]  INFO -- : Completed 200 OK in 120ms (Views: 108.5ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:33:10.690821 #8030]  INFO -- : Started GET "/stores" for 182.185.146.90 at 2020-04-01 13:33:10 +0000
+I, [2020-04-01T13:33:10.691584 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:33:10.695574 #8030]  INFO -- : Processing by StoresController#index as HTML
+I, [2020-04-01T13:33:10.710188 #8030]  INFO -- :   Rendering stores/index.html.erb within layouts/application
+I, [2020-04-01T13:33:10.710890 #8030]  INFO -- :   Rendered stores/index.html.erb within layouts/application (0.4ms)
+I, [2020-04-01T13:33:10.804450 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.5ms)
+I, [2020-04-01T13:33:10.806138 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:33:10.807952 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-01T13:33:10.809348 #8030]  INFO -- : Completed 200 OK in 113ms (Views: 100.5ms | ActiveRecord: 0.7ms)
+
+
+I, [2020-04-01T13:33:15.027447 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:33:15 +0000
+I, [2020-04-01T13:33:15.028524 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:33:15.030517 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:33:15.033759 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:33:15.034652 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.5ms)
+I, [2020-04-01T13:33:15.141517 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.6ms)
+I, [2020-04-01T13:33:15.143189 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:33:15.145192 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.7ms)
+I, [2020-04-01T13:33:15.146621 #8030]  INFO -- : Completed 200 OK in 116ms (Views: 113.5ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:37:30.697108 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:37:30 +0000
+I, [2020-04-01T13:37:30.699973 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:37:30.702233 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:37:30.706212 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:37:30.707755 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.0ms)
+I, [2020-04-01T13:37:30.820488 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.7ms)
+I, [2020-04-01T13:37:30.822979 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:37:30.825941 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.7ms)
+I, [2020-04-01T13:37:30.828129 #8030]  INFO -- : Completed 200 OK in 126ms (Views: 122.4ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:38:10.745239 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:38:10 +0000
+I, [2020-04-01T13:38:10.746797 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:38:10.750180 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:38:10.755061 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:38:10.756429 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.9ms)
+I, [2020-04-01T13:38:10.872349 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.9ms)
+I, [2020-04-01T13:38:10.874595 #8030]  INFO -- :   Rendered partials/_nav.html.erb (1.0ms)
+I, [2020-04-01T13:38:10.877436 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.8ms)
+I, [2020-04-01T13:38:10.878815 #8030]  INFO -- : Completed 200 OK in 128ms (Views: 125.5ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:38:13.403094 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:38:13 +0000
+I, [2020-04-01T13:38:13.404581 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:38:13.406280 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:38:13.410896 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:38:13.412494 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.5ms)
+I, [2020-04-01T13:38:13.510919 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.4ms)
+I, [2020-04-01T13:38:13.513352 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:38:13.515883 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.7ms)
+I, [2020-04-01T13:38:13.518493 #8030]  INFO -- : Completed 200 OK in 111ms (Views: 107.9ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:45:23.832576 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:45:23 +0000
+I, [2020-04-01T13:45:23.833742 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:45:23.838180 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:45:23.841777 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:45:23.842933 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.8ms)
+I, [2020-04-01T13:45:23.943011 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.7ms)
+I, [2020-04-01T13:45:23.944920 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.6ms)
+I, [2020-04-01T13:45:23.946818 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.8ms)
+I, [2020-04-01T13:45:23.948048 #8030]  INFO -- : Completed 200 OK in 110ms (Views: 107.2ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:45:44.508288 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:45:44 +0000
+I, [2020-04-01T13:45:44.509292 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:45:44.511513 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:45:44.514306 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:45:44.515176 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.6ms)
+I, [2020-04-01T13:45:44.613150 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.6ms)
+I, [2020-04-01T13:45:44.614743 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:45:44.616419 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-01T13:45:44.617600 #8030]  INFO -- : Completed 200 OK in 106ms (Views: 103.9ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:57:56.338170 #8030]  INFO -- : Started GET "/home/contact" for 182.185.146.90 at 2020-04-01 13:57:56 +0000
+I, [2020-04-01T13:57:56.340440 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:57:56.344919 #8030]  INFO -- : Processing by HomeController#contact as HTML
+I, [2020-04-01T13:57:56.349000 #8030]  INFO -- :   Rendering home/contact.html.erb within layouts/application
+I, [2020-04-01T13:57:56.350689 #8030]  INFO -- :   Rendered home/contact.html.erb within layouts/application (1.1ms)
+I, [2020-04-01T13:57:56.459520 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.7ms)
+I, [2020-04-01T13:57:56.461329 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:57:56.463271 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-01T13:57:56.465025 #8030]  INFO -- : Completed 200 OK in 119ms (Views: 116.8ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:58:06.652109 #8030]  INFO -- : Started GET "/employees" for 182.185.146.90 at 2020-04-01 13:58:06 +0000
+I, [2020-04-01T13:58:06.653297 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:58:06.655724 #8030]  INFO -- : Processing by EmployeesController#index as HTML
+I, [2020-04-01T13:58:06.660370 #8030]  INFO -- :   Rendering employees/index.html.erb within layouts/application
+I, [2020-04-01T13:58:06.661332 #8030]  INFO -- :   Rendered employees/index.html.erb within layouts/application (0.5ms)
+I, [2020-04-01T13:58:06.768165 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.6ms)
+I, [2020-04-01T13:58:06.770258 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T13:58:06.772154 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.8ms)
+I, [2020-04-01T13:58:06.773537 #8030]  INFO -- : Completed 200 OK in 118ms (Views: 114.2ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T13:58:08.501038 #8030]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 13:58:08 +0000
+I, [2020-04-01T13:58:08.502111 #8030]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T13:58:08.503769 #8030]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T13:58:08.507094 #8030]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T13:58:08.507954 #8030]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.5ms)
+I, [2020-04-01T13:58:08.603086 #8030]  INFO -- :   Rendered partials/_topbar.html.erb (1.5ms)
+I, [2020-04-01T13:58:08.605112 #8030]  INFO -- :   Rendered partials/_nav.html.erb (0.7ms)
+I, [2020-04-01T13:58:08.607449 #8030]  INFO -- :   Rendered partials/_footer.html.erb (0.7ms)
+I, [2020-04-01T13:58:08.609313 #8030]  INFO -- : Completed 200 OK in 105ms (Views: 102.7ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T16:09:49.790619 #16605]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 16:09:49 +0000
+I, [2020-04-01T16:09:49.793788 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+D, [2020-04-01T16:09:49.816347 #16605] DEBUG -- :   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+D, [2020-04-01T16:09:49.816581 #16605] DEBUG -- :   ↳ /usr/local/rbenv/versions/2.7.0/lib/ruby/gems/2.7.0/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+I, [2020-04-01T16:09:49.845184 #16605]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T16:09:49.854679 #16605]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T16:09:49.856192 #16605]  INFO -- :   Rendered home/index.html.erb within layouts/application (1.2ms)
+I, [2020-04-01T16:09:50.401969 #16605]  INFO -- :   Rendered partials/_topbar.html.erb (1.5ms)
+I, [2020-04-01T16:09:50.403681 #16605]  INFO -- :   Rendered partials/_nav.html.erb (0.6ms)
+I, [2020-04-01T16:09:50.407604 #16605]  INFO -- :   Rendered partials/_footer.html.erb (2.5ms)
+I, [2020-04-01T16:09:50.408888 #16605]  INFO -- : Completed 200 OK in 563ms (Views: 556.5ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T16:09:50.954860 #16605]  INFO -- : Started GET "/assets/application.self-90ae7cb823ef33bfb06eb79b4687ce39222577d8384119c386ac357db6e541fe.css?body=1" for 182.185.146.90 at 2020-04-01 16:09:50 +0000
+I, [2020-04-01T16:09:50.955404 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:52.402216 #16605]  INFO -- : Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:52 +0000
+I, [2020-04-01T16:09:52.402661 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:52.407514 #16605]  INFO -- : Started GET "/assets/materialize/cash.self-3fb8ba40ef69d4f09dd3f6202d25f2bdcb4e5bd2c7cfab9c97a40c17633e03fa.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:52 +0000
+I, [2020-04-01T16:09:52.407902 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:52.424609 #16605]  INFO -- : Started GET "/assets/rails-ujs.self-2b8935521e2301b06b45bd42e623eb0c0acf76c3a6ba383b7429c6a2884f8c23.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:52 +0000
+I, [2020-04-01T16:09:52.425001 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:55.413704 #16605]  INFO -- : Started GET "/home" for 182.185.146.90 at 2020-04-01 16:09:55 +0000
+I, [2020-04-01T16:09:55.414720 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:55.416876 #16605]  INFO -- : Processing by HomeController#index as HTML
+I, [2020-04-01T16:09:55.420279 #16605]  INFO -- :   Rendering home/index.html.erb within layouts/application
+I, [2020-04-01T16:09:55.421326 #16605]  INFO -- :   Rendered home/index.html.erb within layouts/application (0.7ms)
+I, [2020-04-01T16:09:55.510461 #16605]  INFO -- :   Rendered partials/_topbar.html.erb (1.4ms)
+I, [2020-04-01T16:09:55.512080 #16605]  INFO -- :   Rendered partials/_nav.html.erb (0.5ms)
+I, [2020-04-01T16:09:55.513720 #16605]  INFO -- :   Rendered partials/_footer.html.erb (0.6ms)
+I, [2020-04-01T16:09:55.514973 #16605]  INFO -- : Completed 200 OK in 98ms (Views: 95.5ms | ActiveRecord: 0.0ms)
+
+
+I, [2020-04-01T16:09:55.952897 #16605]  INFO -- : Started GET "/assets/application.self-90ae7cb823ef33bfb06eb79b4687ce39222577d8384119c386ac357db6e541fe.css?body=1" for 182.185.146.90 at 2020-04-01 16:09:55 +0000
+I, [2020-04-01T16:09:55.953659 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:57.505996 #16605]  INFO -- : Started GET "/assets/rails-ujs.self-2b8935521e2301b06b45bd42e623eb0c0acf76c3a6ba383b7429c6a2884f8c23.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:57 +0000
+I, [2020-04-01T16:09:57.507590 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:57.525230 #16605]  INFO -- : Started GET "/assets/materialize/cash.self-3fb8ba40ef69d4f09dd3f6202d25f2bdcb4e5bd2c7cfab9c97a40c17633e03fa.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:57 +0000
+I, [2020-04-01T16:09:57.525982 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:57.571124 #16605]  INFO -- : Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:57 +0000
+I, [2020-04-01T16:09:57.571889 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:58.344417 #16605]  INFO -- : Started GET "/assets/materialize/component.self-16d42c8d4b8ff5f3db217dbd3c53dbe177150dbb7d8b3a5bf069e461f5c0b6d7.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:58 +0000
+I, [2020-04-01T16:09:58.345911 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:58.388431 #16605]  INFO -- : Started GET "/assets/materialize/global.self-261956099793ab074ae1db119d68e1c1388b1ae8dc8aecce18165834b768434b.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:58 +0000
+I, [2020-04-01T16:09:58.389725 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:58.780697 #16605]  INFO -- : Started GET "/assets/materialize/anime.min.self-f7a6e6dd4948f87f31fd7fdd3a47103f2a5827479364c13213dbc9f62f300669.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:58 +0000
+I, [2020-04-01T16:09:58.782194 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:58.846452 #16605]  INFO -- : Started GET "/assets/materialize/collapsible.self-fdd54f0576c46f2e1888184162a5d442fbd835e745a3747459e910465083796a.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:58 +0000
+I, [2020-04-01T16:09:58.847268 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:59.233116 #16605]  INFO -- : Started GET "/assets/materialize/dropdown.self-f651a43ef18f0c4c3c980121e006c6aabdb354fe1d465fbc797b0ea5da2f6e1d.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:59 +0000
+I, [2020-04-01T16:09:59.233849 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:59.298768 #16605]  INFO -- : Started GET "/assets/materialize/modal.self-51e7fbbc3b46c0e5b9c87e3b03095f645817087951ed47bc73a4b8f6521b0563.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:59 +0000
+I, [2020-04-01T16:09:59.299601 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:59.683930 #16605]  INFO -- : Started GET "/assets/materialize/materialbox.self-909af6b7c8785aa471df318db3228f3eefc45534eae3ecfe290546d7c6211462.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:59 +0000
+I, [2020-04-01T16:09:59.684674 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:59.751196 #16605]  INFO -- : Started GET "/assets/materialize/parallax.self-c5c54a7e094640591becb4782d5c6c5f221ec7b669a73086f4021cc1a0bfece0.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:59 +0000
+I, [2020-04-01T16:09:59.752043 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:59.900609 #16605]  INFO -- : Started GET "/assets/materialize/tabs.self-6c64239da30a110944ae0872dcf25d0416e3b0e647ce58de0945b183a65616d6.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:59 +0000
+I, [2020-04-01T16:09:59.901294 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:09:59.929953 #16605]  INFO -- : Started GET "/assets/materialize/tooltip.self-a7ea47095813cb6a1519c7a665e08a520eb4a568707ac928da5be81ad7348f13.js?body=1" for 182.185.146.90 at 2020-04-01 16:09:59 +0000
+I, [2020-04-01T16:09:59.930616 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:00.125323 #16605]  INFO -- : Started GET "/assets/materialize/waves.self-ed24cac84d0f66808ff978810735b871f814c2bcf592cf9ccdf6b2bcdf8f5ba7.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:00 +0000
+I, [2020-04-01T16:10:00.126059 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:00.189416 #16605]  INFO -- : Started GET "/assets/materialize/toasts.self-c3257dd138db5849f3af2ab8e941a9d5fa30cf4948abaa09939dd3603e989c54.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:00 +0000
+I, [2020-04-01T16:10:00.190157 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:00.364604 #16605]  INFO -- : Started GET "/assets/materialize/scrollspy.self-f53de21bf5e049b8d0fa89b3170175c7386e4d3bd47aff01a481c97ee86b092d.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:00 +0000
+I, [2020-04-01T16:10:00.365333 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:00.384528 #16605]  INFO -- : Started GET "/assets/materialize/sidenav.self-6c66ac3f3314132b57b6a8121ecf1db0abeaf9001681184087df24e39b5044d3.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:00 +0000
+I, [2020-04-01T16:10:00.385044 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:00.554491 #16605]  INFO -- : Started GET "/assets/materialize/autocomplete.self-5cf5bfd9d5d4752ca280ed43a49564e7b66da08cdbe52f5ef86b89f3a69a8e8b.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:00 +0000
+I, [2020-04-01T16:10:00.555939 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:00.633210 #16605]  INFO -- : Started GET "/assets/materialize/forms.self-cf66ce19872b7d1a949e0e027fbb6019c788478e2a860248761aa6936f63e775.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:00 +0000
+I, [2020-04-01T16:10:00.635669 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:00.795887 #16605]  INFO -- : Started GET "/assets/materialize/slider.self-9dab4424c7df0dcd035feb46a706e66267cb301958da742c3362f210d5eea5eb.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:00 +0000
+I, [2020-04-01T16:10:00.797870 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:00.869887 #16605]  INFO -- : Started GET "/assets/materialize/cards.self-2e6a5a4e09ea07f0ddd219098cdf10c9ec56e501b7c94dfb39402a00a011cd25.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:00 +0000
+I, [2020-04-01T16:10:00.870417 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:00.998755 #16605]  INFO -- : Started GET "/assets/materialize/chips.self-6d72856d7ea5390b8cb8bf7848a22d733611ef1a0ba57c24ba2fe6615d9fbba4.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:00 +0000
+I, [2020-04-01T16:10:00.999527 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:01.079519 #16605]  INFO -- : Started GET "/assets/materialize/pushpin.self-26f9db266bc16ce11ffeac03cfd0a10341dc79eabb671161314c829d7e754fcf.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:01 +0000
+I, [2020-04-01T16:10:01.080875 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:01.237314 #16605]  INFO -- : Started GET "/assets/materialize/buttons.self-e02b8d334ae505070cbb467500f0f4faca1ef008a860390a3b1e56b96fc025b0.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:01 +0000
+I, [2020-04-01T16:10:01.238962 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:01.339521 #16605]  INFO -- : Started GET "/assets/materialize/datepicker.self-4409f15553f686fb6167467c4ef704b423135cd5f895ce3405091a4f3d450f9e.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:01 +0000
+I, [2020-04-01T16:10:01.340063 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:01.435539 #16605]  INFO -- : Started GET "/assets/materialize/timepicker.self-0e4b5d1e8c7fc96e807f292fba542f3a19d2072454b5ea813968efdefc5bb70d.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:01 +0000
+I, [2020-04-01T16:10:01.436144 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:01.530860 #16605]  INFO -- : Started GET "/assets/materialize/characterCounter.self-ff1c9f4d6d8280b64b2c4fd7ddf37e9f6996eeefa7675eefc507c0b9f2621a1e.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:01 +0000
+I, [2020-04-01T16:10:01.532731 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:01.672610 #16605]  INFO -- : Started GET "/assets/materialize/carousel.self-67caf6f6ed54e4284e01f92650d915a3fef2d4faeada4948d9771399ac2c75ea.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:01 +0000
+I, [2020-04-01T16:10:01.676544 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:01.832913 #16605]  INFO -- : Started GET "/assets/materialize/tapTarget.self-84af6a5050616c77c1a27c272ce9c9e433215d393fdd8f678881422a8d794fc9.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:01 +0000
+I, [2020-04-01T16:10:01.835533 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:01.875905 #16605]  INFO -- : Started GET "/assets/materialize/select.self-49f3d15447ef926fd6dd40f4231a791f2e000bd000c7dde1dd69c1a9fdcf4f69.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:01 +0000
+I, [2020-04-01T16:10:01.877220 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:01.977432 #16605]  INFO -- : Started GET "/assets/materialize/range.self-2edaea2cdeecef2d29edaa280a2fffbe275f4b7e5b842bbed15c16d11db91d70.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:01 +0000
+I, [2020-04-01T16:10:01.978208 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:02.123645 #16605]  INFO -- : Started GET "/assets/materialize-sprockets.self-a0bdb7e71846a959dad4890557156530d5b836126491ac853ac3c629c04c9030.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:02 +0000
+I, [2020-04-01T16:10:02.124230 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:02.313205 #16605]  INFO -- : Started GET "/assets/assignments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:02 +0000
+I, [2020-04-01T16:10:02.313898 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:02.318317 #16605]  INFO -- : Started GET "/assets/materialize-form.self-a1bf000dd2cf2f4b28e701d4625b1d36adf60e2a68124688869cfd2bd951bc85.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:02 +0000
+I, [2020-04-01T16:10:02.318846 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:02.419161 #16605]  INFO -- : Started GET "/assets/action_cable.self-69fddfcddf4fdef9828648f9330d6ce108b93b82b0b8d3affffc59a114853451.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:02 +0000
+I, [2020-04-01T16:10:02.420190 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:02.553262 #16605]  INFO -- : Started GET "/assets/cable.self-8484513823f404ed0c0f039f75243bfdede7af7919dda65f2e66391252443ce9.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:02 +0000
+I, [2020-04-01T16:10:02.553881 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:02.734169 #16605]  INFO -- : Started GET "/assets/employees.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:02 +0000
+I, [2020-04-01T16:10:02.734620 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:02.796912 #16605]  INFO -- : Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:02 +0000
+I, [2020-04-01T16:10:02.797421 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:02.869724 #16605]  INFO -- : Started GET "/assets/stores.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:02 +0000
+I, [2020-04-01T16:10:02.870164 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:02.972024 #16605]  INFO -- : Started GET "/assets/application.self-6905bfa38aab1d2d523c6a8aeb6bd4a6bd5338eb82bfad3b2edcc4606705f4f6.js?body=1" for 182.185.146.90 at 2020-04-01 16:10:02 +0000
+I, [2020-04-01T16:10:02.972512 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+I, [2020-04-01T16:10:03.153544 #16605]  INFO -- : Started GET "/assets/logos/logo_80x80-319c5d5ac66e0f53979a1eb9fe45b354a7db12800987708f28e65cf270950d3c.png" for 182.185.146.90 at 2020-04-01 16:10:03 +0000
+I, [2020-04-01T16:10:03.154098 #16605]  INFO -- : Cannot render console from 182.185.146.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255

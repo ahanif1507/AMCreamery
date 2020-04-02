@@ -1,2 +1,100 @@
-<h1>Employees#index</h1>
-<p>Find me in app/views/employees/index.html.erb</p>
+<% if @active_employees.empty? %>
+  <h4>There are no active managers at this time</h4>
+  <h4>There are no active employees at this time</h4>
+<% else %>
+  <h4>Active Managers</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Current Assignment</th>
+      <th class="align_center">Options</th>
+    </thead>
+    <% for employee in @active_managers %>
+      <tr>
+        <td><%= link_to "#{employee.last_name}, #{employee.first_name}", employee_path(employee) %></td>
+        <td><%= number_to_phone employee.phone %></td>
+        <% if employee.current_assignment.nil? == false %>
+       <td><%= employee.current_assignment.store.name %></td>
+       <% else %>
+       <td>n/a</td>
+       <% end %>
+        <td class="align_center">
+          <%= link_to edit_employee_path(employee) do %>
+              <i class="material-icons">edit</i>
+          <% end %>
+          &nbsp;&nbsp;&nbsp;&nbsp; 
+          
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <br />
+  <%= will_paginate @active_managers, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
+  
+  <h4>Active Employees</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Current Assignment</th>
+      <th class="align_center">Options</th>
+    </thead>
+    <% for employee in @active_employees %>
+      <tr>
+        <td><%= link_to "#{employee.last_name}, #{employee.first_name}", employee_path(employee) %></td>
+        <td><%= number_to_phone employee.phone %></td>
+        <% if employee.current_assignment.nil? == false %>
+       <td><%= employee.current_assignment.store.name %></td>
+       <% else %>
+       <td>n/a</td>
+       <% end %>
+        <td class="align_center">
+          <%= link_to edit_employee_path(employee) do %>
+              <i class="material-icons">edit</i>
+          <% end %>
+          &nbsp;&nbsp;&nbsp;&nbsp; 
+       
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <br />
+  <%= will_paginate @active_employees, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
+  
+  <h4>Inactive Employees</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Current Assignment</th>
+      <th class="align_center">Options</th>
+    </thead>
+    <% for employee in @inactive_employees %>
+      <tr>
+        <td><%= link_to "#{employee.last_name}, #{employee.first_name}", employee_path(employee) %></td>
+        <td><%= number_to_phone employee.phone %></td>
+        <% if employee.current_assignment.nil? == false %>
+       <td><%= employee.current_assignment.store.name %></td>
+       <% else %>
+       <td>n/a</td>
+       <% end %>
+        <td class="align_center">
+          <%= link_to edit_employee_path(employee) do %>
+              <i class="material-icons">edit</i>
+          <% end %>
+          &nbsp;&nbsp;&nbsp;&nbsp; 
+         
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <br />
+  <%= will_paginate @inactive_employees, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
+  
+<% end %>
+<p>&nbsp;</p>
+
+<p><strong>
+<%= link_to "Add a New Employee", new_employee_path, class: 'waves-effect waves-light btn' %> 
+</strong></p>

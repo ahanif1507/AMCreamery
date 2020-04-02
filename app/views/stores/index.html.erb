@@ -1,2 +1,65 @@
-<h1>Stores#index</h1>
-<p>Find me in app/views/stores/index.html.erb</p>
+<% if @active_stores.empty? %>
+  <h4>There are no active stores at this time.</h4>
+<% else %>
+  <h4>Active Stores</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Name</th>
+      <th>City</th>
+      <th>Current Assignments</th>
+      <th>Phone</th>
+      <th class="align_center">Options</th>
+    </thead>
+    <% for store in @active_stores %>
+      <tr>
+        <td><%= link_to store.name, store_path(store) %></td>
+        <td><%= store.city %></td>
+       <td><%= store.assignments.current.count %></td>
+        <td><%= number_to_phone store.phone %></td>
+        <td class="align_center">
+          <%= link_to edit_store_path(store) do %>
+              <i class="material-icons">edit</i>
+          <% end %>
+          &nbsp;&nbsp;&nbsp;&nbsp; 
+       
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <br />
+  <%= will_paginate @active_stores, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
+  
+   <h4>Inctive Stores</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Name</th>
+      <th>City</th>
+      <th>Current Assignments</th>
+      <th>Phone</th>
+      <th class="align_center">Options</th>
+    </thead>
+    <% for store in @inactive_stores %>
+      <tr>
+        <td><%= link_to store.name, store_path(store) %></td>
+        <td><%= store.city %></td>
+       <td><%= store.assignments.current.count %></td>
+        <td><%= number_to_phone store.phone %></td>
+        <td class="align_center">
+          <%= link_to edit_store_path(store) do %>
+              <i class="material-icons">edit</i>
+          <% end %>
+          &nbsp;&nbsp;&nbsp;&nbsp; 
+       
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <br />
+  <%= will_paginate @inactive_stores, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
+  
+<% end %>
+<p>&nbsp;</p>
+
+<p><strong>
+<%= link_to "Add a New Store", new_store_path, class: 'waves-effect waves-light btn' %> 
+</strong></p>

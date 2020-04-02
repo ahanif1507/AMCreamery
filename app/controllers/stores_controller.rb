@@ -3,18 +3,15 @@ class StoresController < ApplicationController
   before_action :set_store, only: [:edit, :update, :show]
   
   def index
-		@active_stores = Store.active
-		@inactive_stores = Store.inactive
+		@active_stores = Store.active.paginate(page: params[:page]).per_page(15)
+		@inactive_stores = Store.inactive.paginate(page: params[:page]).per_page(15)
   end
   
   def show
 
-   # @current_managers =  Assignment.current.for_store(@store.id).for_role("manager").map!{|a| a.employee}
-   # @current_employees = Assignment.current.for_store(@store.id).for_role("employee").map!{|a| a.employee}
-
-    @current_managers = @store.assignments.current.map!{|a| a.employee}.select{|e| e.role == 'manager'}
-    @current_employees = @store.assignments.current.map!{|a| a.employee}.select{|e| e.role == 'employee'}
-
+    @current_managers = @store.assignments.current.map{|a| a.employee}.select{|e| e.role == 'manager'}
+    @current_employees = @store.assignments.current.map{|a| a.employee}.select{|e| e.role == 'employee'}
+    
   end
   
   def new

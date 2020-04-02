@@ -1,2 +1,41 @@
-<h1>Stores#show</h1>
-<p>Find me in app/views/stores/show.html.erb</p>
+<h4>Store Details</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Name</th>
+      <th>Street</th>
+      <th>Address</th>
+      <th>phone</th>
+    </thead>
+      <tr>
+        <td><%= @store.name %></td>
+        <td><%= @store.street %></td>
+        <td><%= @store.city %>, <%= @store.state %> <%= @store.zip %></td>
+        <td><%= number_to_phone @store.phone %></td>
+      </tr>
+  </table>
+<br>
+
+<table class="striped highlight">
+    <thead>
+      <th>Manager(s)</th>
+    </thead>
+      <% for managers in @current_managers %>
+      <tr>
+        <td><%= managers.name %></td>
+      </tr>
+      <% end %> 
+  </table>
+<br>
+
+<table class="striped highlight">
+    <thead>
+      <th>Current Employees</th>
+    </thead>
+     <% for employees in @current_employees %>
+      <tr>
+        <td><%= employees.name %></td>
+      </tr>
+     <% end %> 
+  </table>
+<br>
+

@@ -1,2 +1,54 @@
-<h1>Employees#show</h1>
-<p>Find me in app/views/employees/show.html.erb</p>
+<h4>Employee Details</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Name</th>
+      <th>Role</th>
+      <th>Phone</th>
+      <th>SSN</th>
+      <th>Date of Birth</th>
+      <th>Active</th>
+    </thead>
+      <tr>
+        <td><%= @employee.proper_name %></td>
+        <td><%= @employee.role %></td>
+        <td><%= number_to_phone @employee.phone %></td>
+        <td><%= number_to_ssn @employee.ssn %></td>
+        <td><%= @employee.date_of_birth.strftime("%B %d, %Y") %></td>
+        <% if @employee.active == true %>
+        <td>Active with AMC</td>
+        <% else %>
+        <td>Inactive with AMC</td>
+        <% end %>
+        </td>
+      </tr>
+  </table>
+<br>
+
+<% if @current_assignment.count != 0 %>
+<table class="striped highlight">
+    <thead>
+      <th>Current Assignment</th>
+    </thead>
+      <tr>
+        <td><%= link_to @employee.current_assignment.store.name, store_path(@employee.current_assignment.store) %></td>
+        <td>Since <%= @employee.current_assignment.start_date.strftime("%B %d, %Y") %></td>
+      </tr>
+  </table>
+<br>
+<% end %>
+
+<% if @previous_assignments.count != 0  %>
+<table class="striped highlight">
+    <thead>
+      <th>Previous Assignment</th>
+      <th>Dates<th>
+    </thead>
+     <% for assignment in @previous_assignments %>
+      <tr>
+        <td><%= link_to assignment.store.name, store_path(@employee.current_assignment.store) %></td>
+        <td><%= assignment.start_date.strftime("%m/%d/%Y") %> - <%= assignment.end_date.strftime("%m/%d/%Y") %></td>
+      </tr>
+     <% end %> 
+  </table>
+<br>
+<% end %>
