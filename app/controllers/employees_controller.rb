@@ -4,8 +4,8 @@ class EmployeesController < ApplicationController
   
   def index
       @active_managers = Employee.managers.active.alphabetical.paginate(page: params[:page]).per_page(15)
-      @active_employees = Employee.active.alphabetical.paginate(page: params[:page]).per_page(15)
-      @inactive_employees = Employee.inactive.alphabetical.paginate(page: params[:page]).per_page(15)
+      @active_employees = Employee.regulars.alphabetical.paginate(page: params[:page]).per_page(15)
+      @inactive_employees = Employee.regulars.inactive.alphabetical.paginate(page: params[:page]).per_page(15)
   end
   
   def detail

@@ -1,4 +1,6 @@
- 
+<% if @current_assignments.empty? %>
+  <h4>There are no current assignments at this time</h4>
+<% else %>
 <h4>Current Assignments</h4>
 <table class="striped highlight">
     <thead>
@@ -11,15 +13,18 @@
     <tr>
         <td><%= link_to assignment.employee.name, employee_path(assignment.employee) %></td>
         <td><%= link_to assignment.store.name, store_path(assignment.store) %></td>
-        <td><%= assignment.start_date.strftime("%m/%d/%Y") %> - Present</td>
+        <td><%= assignment.start_date.strftime("%-m/%-d/%Y") %> - Present</td>
         <td><%= link_to 'Terminate', assignments_terminate_path(assignment) %></td>
     </tr>
     <% end %>
   </table>
   <br />
   <%= will_paginate @current_assignments, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
+<% end %>
 
-
+<% if @current_assignments.empty? %>
+  <h4>There are no past assignments at this time</h4>
+<% else %>
 <h4>Past Assignments</h4>
 <table class="striped highlight">
     <thead>
@@ -31,13 +36,13 @@
       <tr>
         <td><%= link_to assignment.employee.name, employee_path(assignment.employee) %></td>
         <td><%= link_to assignment.store.name, store_path(assignment.store) %></td>
-        <td><%= assignment.start_date.strftime("%m/%d/%Y") %> - <%= assignment.end_date.strftime("%m/%d/%Y") %></td>
+        <td><%= assignment.start_date.strftime("%-m/%-d/%Y").to_s %> - <%= assignment.end_date.strftime("%-m/%-d/%Y") %></td>
       </tr>
     <% end %>
 </table>
   <br />
   <%= will_paginate @past_assignments, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
-  
+<% end %>
 <p>&nbsp;</p>
 
 <p><strong>

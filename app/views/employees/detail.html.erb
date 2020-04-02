@@ -4,13 +4,13 @@
       <th>Name</th>
       <th>Role</th>
       <th>Phone</th>
-      <th>SSN</th>
+      <th>Social Security Number</th>
       <th>Date of Birth</th>
       <th>Active</th>
     </thead>
       <tr>
         <td><%= @employee.proper_name %></td>
-        <td><%= @employee.role %></td>
+        <td><%= @employee.role.capitalize %></td>
         <td><%= number_to_phone @employee.phone %></td>
         <td><%= number_to_ssn @employee.ssn %></td>
         <td><%= @employee.date_of_birth.strftime("%B %d, %Y") %></td>

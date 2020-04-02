@@ -1,41 +1,56 @@
-<h4>Store Details</h4>
+<h4><%= @store.name %> Store Details</h4>
   <table class="striped highlight">
     <thead>
-      <th>Name</th>
+      <th>Phone</th>
       <th>Street</th>
       <th>Address</th>
-      <th>phone</th>
+       <th>Active</th>
     </thead>
       <tr>
-        <td><%= @store.name %></td>
+        <td><%= number_to_phone @store.phone %></td>
         <td><%= @store.street %></td>
         <td><%= @store.city %>, <%= @store.state %> <%= @store.zip %></td>
-        <td><%= number_to_phone @store.phone %></td>
+        <% if @store.active? == false %>
+       <td>No</td>
+       <% else %>
+       <td>Yes</td>
+       <% end %>
       </tr>
   </table>
 <br>
+
 
 <table class="striped highlight">
     <thead>
       <th>Manager(s)</th>
     </thead>
+    <% if @current_managers.empty? %>
+        <tr>n/a</tr>
+<% else %>
       <% for managers in @current_managers %>
       <tr>
-        <td><%= managers.name %></td>
+        <td><%= managers.proper_name %></td>
       </tr>
       <% end %> 
+<% end %>
   </table>
 <br>
+
+
 
 <table class="striped highlight">
     <thead>
       <th>Current Employees</th>
     </thead>
+    <% if @current_employees.empty? %>
+  <tr>There are no employees assigned at this time.</tr>
+  <% else %>
      <% for employees in @current_employees %>
       <tr>
         <td><%= employees.name %></td>
       </tr>
-     <% end %> 
+     <% end %>
+     <% end %>
   </table>
 <br>
 

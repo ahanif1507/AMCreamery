@@ -25,13 +25,14 @@
   <br />
   <%= will_paginate @active_stores, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
   
-   <h4>Inctive Stores</h4>
+   <h4>Inactive Stores</h4>
   <table class="striped highlight">
     <thead>
       <th>Name</th>
       <th>City</th>
       <th>Current Assignments</th>
       <th>Phone</th>
+      <th>Active</th>
       <th class="align_center">Options</th>
     </thead>
     <% for store in @inactive_stores %>
@@ -39,6 +40,11 @@
         <td><%= link_to store.name, store_path(store) %></td>
         <td><%= store.city %></td>
        <td><%= store.assignments.current.count %></td>
+       <% if store.active? == false %>
+       <td>No</td>
+       <% else %>
+       <td>Yes</td>
+       <% end %>
         <td><%= number_to_phone store.phone %></td>
         <td class="align_center">
           <%= link_to 'Edit', edit_store_path(store) %>
