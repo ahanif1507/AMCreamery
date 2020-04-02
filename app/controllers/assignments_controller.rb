@@ -3,8 +3,8 @@ class AssignmentsController < ApplicationController
   before_action :set_assignment, only: [:destroy, :terminate]
   
   def index
-      @current_assignments = Assignment.current.chronological
-	  @past_assignments = Assignment.past.chronological
+      @current_assignments = Assignment.current.chronological.paginate(page: params[:page]).per_page(15)
+	  @past_assignments = Assignment.past.chronological.paginate(page: params[:page]).per_page(15)
   end
   
   def new

@@ -17,11 +17,7 @@
        <td><%= store.assignments.current.count %></td>
         <td><%= number_to_phone store.phone %></td>
         <td class="align_center">
-          <%= link_to edit_store_path(store) do %>
-              <i class="material-icons">edit</i>
-          <% end %>
-          &nbsp;&nbsp;&nbsp;&nbsp; 
-       
+          <%= link_to 'Edit', edit_store_path(store) %>
         </td>
       </tr>
     <% end %>
@@ -45,11 +41,7 @@
        <td><%= store.assignments.current.count %></td>
         <td><%= number_to_phone store.phone %></td>
         <td class="align_center">
-          <%= link_to edit_store_path(store) do %>
-              <i class="material-icons">edit</i>
-          <% end %>
-          &nbsp;&nbsp;&nbsp;&nbsp; 
-       
+          <%= link_to 'Edit', edit_store_path(store) %>
         </td>
       </tr>
     <% end %>

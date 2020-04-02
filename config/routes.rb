@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
     
+ root 'home#index'
+    
   get 'stores/index'
   get 'stores/new'
   get 'stores/show'
@@ -33,6 +35,10 @@ Rails.application.routes.draw do
   get 'assignment/new'
   get 'assignment/create'
   # Your routes go here
+  
+  get 'assignments/terminate'
+  
+  get '/employees/:id/detail', to: 'employees#detail', as: :detail
   
   resources :employees
   resources :assignments

@@ -12,20 +12,20 @@
     </thead>
     <% for employee in @active_managers %>
       <tr>
-        <td><%= link_to "#{employee.last_name}, #{employee.first_name}", employee_path(employee) %></td>
+        <td><%= link_to "#{employee.last_name}, #{employee.first_name}", detail_path(employee) %></td>
         <td><%= number_to_phone employee.phone %></td>
         <% if employee.current_assignment.nil? == false %>
        <td><%= employee.current_assignment.store.name %></td>
        <% else %>
        <td>n/a</td>
        <% end %>
-        <td class="align_center">
-          <%= link_to edit_employee_path(employee) do %>
-              <i class="material-icons">edit</i>
-          <% end %>
-          &nbsp;&nbsp;&nbsp;&nbsp; 
-          
-        </td>
+       <td class="align_center">
+        <%= link_to 'Edit', edit_employee_path(employee) %>
+        &nbsp;
+        <%= link_to 'Show', employee_path(employee) %>
+        &nbsp;
+        <%= link_to 'Details', detail_path(employee) %>
+       </td>
       </tr>
     <% end %>
   </table>
@@ -42,20 +42,20 @@
     </thead>
     <% for employee in @active_employees %>
       <tr>
-        <td><%= link_to "#{employee.last_name}, #{employee.first_name}", employee_path(employee) %></td>
+        <td><%= link_to "#{employee.last_name}, #{employee.first_name}", detail_path(employee) %></td>
         <td><%= number_to_phone employee.phone %></td>
         <% if employee.current_assignment.nil? == false %>
        <td><%= employee.current_assignment.store.name %></td>
        <% else %>
        <td>n/a</td>
        <% end %>
-        <td class="align_center">
-          <%= link_to edit_employee_path(employee) do %>
-              <i class="material-icons">edit</i>
-          <% end %>
-          &nbsp;&nbsp;&nbsp;&nbsp; 
-       
-        </td>
+         <td class="align_center">
+        <%= link_to 'Edit', edit_employee_path(employee) %>
+        &nbsp;
+        <%= link_to 'Show', employee_path(employee) %>
+        &nbsp;
+        <%= link_to 'Details', detail_path(employee) %>
+       </td>
       </tr>
     <% end %>
   </table>
@@ -80,12 +80,12 @@
        <td>n/a</td>
        <% end %>
         <td class="align_center">
-          <%= link_to edit_employee_path(employee) do %>
-              <i class="material-icons">edit</i>
-          <% end %>
-          &nbsp;&nbsp;&nbsp;&nbsp; 
-         
-        </td>
+        <%= link_to 'Edit', edit_employee_path(employee) %>
+        &nbsp;
+        <%= link_to 'Show', employee_path(employee) %>
+        &nbsp;
+        <%= link_to 'Details', detail_path(employee) %>
+       </td>
       </tr>
     <% end %>
   </table>

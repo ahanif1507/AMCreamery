@@ -1,28 +1,3 @@
-<h4>Employee Details</h4>
-  <table class="striped highlight">
-    <thead>
-      <th>Name</th>
-      <th>Role</th>
-      <th>Phone</th>
-      <th>SSN</th>
-      <th>Date of Birth</th>
-      <th>Active</th>
-    </thead>
-      <tr>
-        <td><%= @employee.proper_name %></td>
-        <td><%= @employee.role %></td>
-        <td><%= number_to_phone @employee.phone %></td>
-        <td><%= number_to_ssn @employee.ssn %></td>
-        <td><%= @employee.date_of_birth.strftime("%B %d, %Y") %></td>
-        <% if @employee.active == true %>
-        <td>Active with AMC</td>
-        <% else %>
-        <td>Inactive with AMC</td>
-        <% end %>
-        </td>
-      </tr>
-  </table>
-<br>
 
 <% if @current_assignment.count != 0 %>
 <table class="striped highlight">

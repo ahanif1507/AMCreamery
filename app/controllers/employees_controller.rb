@@ -1,11 +1,16 @@
 class EmployeesController < ApplicationController
   
-  before_action :set_employee, only: [:update, :edit, :show]
+  before_action :set_employee, only: [:update, :edit, :show, :detail]
   
   def index
       @active_managers = Employee.managers.active.alphabetical.paginate(page: params[:page]).per_page(15)
       @active_employees = Employee.active.alphabetical.paginate(page: params[:page]).per_page(15)
       @inactive_employees = Employee.inactive.alphabetical.paginate(page: params[:page]).per_page(15)
+  end
+  
+  def detail
+      @current_assignment = @employee.assignments.current
+      @previous_assignments = @employee.assignments.past.chronological
   end
     
   def show

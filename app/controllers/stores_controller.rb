@@ -1,6 +1,6 @@
 class StoresController < ApplicationController
   
-  before_action :set_store, only: [:edit, :update, :show]
+  before_action :set_store, only: [:edit, :update, :show, :detail]
   
   def index
 		@active_stores = Store.active.paginate(page: params[:page]).per_page(15)
@@ -12,6 +12,11 @@ class StoresController < ApplicationController
     @current_managers = @store.assignments.current.map{|a| a.employee}.select{|e| e.role == 'manager'}
     @current_employees = @store.assignments.current.map{|a| a.employee}.select{|e| e.role == 'employee'}
     
+  end
+  
+  def detail
+    @current_managers = @store.assignments.current.map{|a| a.employee}.select{|e| e.role == 'manager'}
+    @current_employees = @store.assignments.current.map{|a| a.employee}.select{|e| e.role == 'employee'}
   end
   
   def new
