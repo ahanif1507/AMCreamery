@@ -24,10 +24,8 @@ class AssignmentsController < ApplicationController
   end
   
   def terminate
-    puts @assignment.start_date
     if @assignment.terminate
-    flash[:notice] = "Terminated assignment in the system."
-    redirect_to assignments_url
+      redirect_to assignments_path, notice: "Assignment for #{@assignment.employee.proper_name} terminated."
     end
   end
   
@@ -43,7 +41,7 @@ class AssignmentsController < ApplicationController
     end
     
     def assignment_params
-      params.require(:assignment).permit(:store_id, :employee_id, :start_date, :end_date)
+      params.require(:assignment).permit(:store_id, :employee_id, :start_date)
     end
 
 end

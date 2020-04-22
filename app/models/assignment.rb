@@ -3,6 +3,8 @@ class Assignment < ApplicationRecord
   # Relationships
   belongs_to :store
   belongs_to :employee
+  belongs_to :pay_grade
+  has_many :shifts
 
   # Scopes
   scope :current,       -> { where('end_date IS NULL') }

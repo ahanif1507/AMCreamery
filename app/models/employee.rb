@@ -1,5 +1,7 @@
 class Employee < ApplicationRecord
 
+  has_secure_password
+
   # Relationships
   has_many :assignments
   has_many :stores, through: :assignments
