@@ -1,50 +1,71 @@
-class Store < ApplicationRecord
-
-  # Relationships
+class Shift < ApplicationRecord
+ 
+  before_create :set_end_time
+  before_destroy :do_not_delete, unless: :should_delete?
+  
+  # def destroy
+  #   super if should_delete?
+  # end
+  
+  #relationships
   belongs_to :assignment
-  has_many :employees, through: :assignments
+  has_one :store, through: :assignment
+	has_one :employee, through: :assignment
+  has_many :shift_jobs
+  has_many :jobs, through: :shift_jobs
+  
+  #validations
+  validate_presence_of :assignment_id
+  validates_inclusion_of :status, in: %w[pending started finished], message: 'is not an option'
+  validates_date :date, :on_or_after => self.assignment.start_date.to_date, :allow_blank => false
+  validates_time :start_time, :allow_blank => false
+	validates_time :end_time, :after => :start_time, :allow_blank => true
 
-  # Scopes
-  scope :alphabetical, -> { order('name') }
-  scope :active,       -> { where(active: true) }
-  scope :inactive,     -> { where.not(active: true) }
-
-  # Validations
-  # make sure required fields are present
-  validates_presence_of :name, :street, :city
-  # if state is given, must be one of the choices given (no hacking this field)
-  validates_inclusion_of :state, in:  %w[PA OH WV], message: "is not an option"
-  # if zip included, it must be 5 digits only
-  validates_format_of :zip, with: /\A\d{5}\z/, message: "should be five digits long"
-  # phone can have dashes, spaces, dots and parens, but must be 10 digits
-  validates_format_of :phone, with: /\A\(?\d{3}\)?[-. ]?\d{3}[-.]?\d{4}\z/, message: "should be 10 digits (area code needed) and delimited with dashes only"
-  # make sure stores have unique names (case insensitive)
-  validates_uniqueness_of :name, case_sensitive: false
-
-  # Other methods
-  def make_active
-    self.active = true
-    self.save!
+  #scopes
+  scope :completed, joins(:shift_jobs).group(:shift_id)
+	scope :incomplete, joins("LEFT JOIN shift_jobs ON shifts.id = shift_jobs.shift_id").where('shift_jobs.job_id IS NULL')
+	scope :for_store, -> {|store_id| joins(:assignment, :store).where("assignments.store_id = ?", store_id) }
+	scope :for_employee, -> {|employee_id| joins(:assignment, :employee).where("assignments.employee_id = ?", employee_id) }
+	scope :past, where('date < ?', Date.today)
+  scope :upcoming, where('date >= ?', Date.today)
+  scope :pending, where('status = ?', 'pending')
+  scope :started, where('status = ?', 'started')
+  scope :finished, where('status = ?', 'finished')
+	scope :for_next_days, -> {|x| where('date BETWEEN ? AND ?', Date.today, x.days.from_now.to_date)}
+	scope :for_past_days, -> {|x| where('date BETWEEN ? AND ?', x.days.ago.to_date, 1.day.ago.to_date)}
+  scope :for_dates, -> {|x,y| where('date BETWEEN ? AND ?', x.days.ago.to_date, y.days.ago.to_date)}
+  scope :chronological, order(:date, :start_time)
+	scope :by_store, joins(:assignment, :store).order(:name)
+  scope :by_employee, joins(:assignment, :employee).order(:last_name, :first_name)
+  
+  #metods
+  def report_completed?
+    return self.shift_jobs.count > 0
   end
 
-  def make_inactive
-    self.active = false
-    self.save!
+  def duration
+    shift_time = end_time.ceil(15*60) - start_time.round_off(15*60)
+		duration = shift_time.abs/3600
+		return duration
   end
 
-  # Callbacks
-  before_save :reformat_phone
-
-  # Misc Constants
-  STATES_LIST = [['Ohio', 'OH'],['Pennsylvania', 'PA'],['West Virginia', 'WV']]
-
-  def certify_autograde
-    return -3554384015922413861
-  end
 
   private
-  def reformat_phone
-    self.phone = self.phone.to_s.gsub(/[^0-9]/,"")
+  def set_end_time
+		self.end_time = self.start_time + (3*60*60)
+  end
+  
+  def do_not_delete
+    throw(:abort)
+  end
+
+  #only delete when status = 'pending'
+  def should_delete?
+    if self.status == "pending"
+      return true
+    else
+      return false
+    end
   end
 
 end
