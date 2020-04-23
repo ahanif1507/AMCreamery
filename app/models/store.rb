@@ -1,5 +1,7 @@
 class Store < ApplicationRecord
 
+  before_destroy :do_not_delete
+
   # Relationships
   has_many :assignments
   has_many :employees, through: :assignments
@@ -46,5 +48,10 @@ class Store < ApplicationRecord
   def reformat_phone
     self.phone = self.phone.to_s.gsub(/[^0-9]/,"")
   end
+
+  def do_not_delete
+    throw(:abort)
+  end
+
 
 end

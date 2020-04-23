@@ -17,10 +17,12 @@ class PayGrade < ApplicationRecord
     #methods 
     def make_active
       self.active = true
+      self.save!
     end
-      
+  
     def make_inactive
       self.active = false
+      self.save!
     end
     
     private

@@ -1,7 +1,7 @@
 class PayGradeRatesController < ApplicationController
 
   before_action :check_login 
-  before_action :set_pay_grade_rate, only: [:edit, :show, :update]
+  before_action :set_pay_grade_rate, only: [:edit, :show, :update, :destroy]
 
   def new
 		@pay_grade_rate = PayGradeRate.new
@@ -38,11 +38,11 @@ class PayGradeRatesController < ApplicationController
 		end
   end
   
-  def destroy
-    @pay_grade_rate.destroy
-    flash[:notice] = "Removed pay grade rate from the system."
-    redirect_to pay_grade_rates_url
-  end
+  # def destroy
+  #   @pay_grade_rate.destroy
+  #   flash[:notice] = "Removed pay grade rate from the system."
+  #   redirect_to pay_grade_rates_url
+  # end
   
   private
     def set_pay_grade_rate

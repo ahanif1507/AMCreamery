@@ -2,7 +2,7 @@ class ShiftsController < ApplicationController
 
   before_action :check_login 
 
-  before_action :set_shift, only: [:edit, :show, :update]
+  before_action :set_shift, only: [:edit, :show, :update, :destroy]
 
   def new
 		@shift = Shift.new

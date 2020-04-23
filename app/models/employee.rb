@@ -2,20 +2,14 @@ class Employee < ApplicationRecord
 
   has_secure_password
 
-  def self.authenticate(username, password)
-    find_by_username(username).try(:authenticate, password)
-  end
-
-  ROLES = [['Admin', :admin,['Manager', :manager],['Employee', :employee]]
-
-  def role?(authorized_role)
-    return false if role.nil?
-    role.to_sym == authorized_role
-  end
+  before_destroy :do_not_delete, unless: :should_delete?
 
   # Relationships
   has_many :assignments
   has_many :stores, through: :assignments
+  has_many :pay_grades, through: :assignments
+  has_many :pay_grade_rates, through: :pay_grades
+  has_many :shifts, through: :assignments
 
   # Scopes
   scope :younger_than_18, -> { where('date_of_birth > ?', 18.years.ago.to_date) }
@@ -28,12 +22,17 @@ class Employee < ApplicationRecord
   scope :inactive,        -> { where.not(active: true) }
 
   # Validations
-  validates_presence_of :first_name, :last_name, :ssn, :role
+  validates_presence_of :first_name, :last_name, :ssn, :role, :username
   validates_date :date_of_birth, :on_or_before => lambda { 14.years.ago }, on_or_before_message: 'must be at least 14 years old'
   validates_format_of :phone, with: /\A(\d{10}|\(?\d{3}\)?[-. ]\d{3}[-.]\d{4})\z/, message: 'should be 10 digits (area code needed) and delimited with dashes only'
   validates_format_of :ssn, with: /\A\d{3}[- ]?\d{2}[- ]?\d{4}\z/, message: 'should be 9 digits and delimited with dashes only'
   validates_uniqueness_of :ssn
   validates_inclusion_of :role, in: %w[admin manager employee], message: 'is not an option'
+  validates_uniqueness_of :username
+  validates_presence_of :password, :on => :create 
+  validates_presence_of :password_confirmation, :on => :create 
+  validates_confirmation_of :password, message: "does not match"
+  validates_length_of :password, :minimum => 4, message: "must be at least 4 characters long", :allow_blank => true
 
   # Other methods
   def name
@@ -74,6 +73,40 @@ class Employee < ApplicationRecord
 
   ROLES_LIST = [['Employee', 'employee'],['Manager', 'manager'],['Administrator', 'admin']].freeze
 
+  def self.authenticate(username, password)
+    find_by_username(username).try(:authenticate, password)
+  end
+
+  def role?(authorized_role)
+    return false if role.nil?
+    role.to_sym == authorized_role
+  end
+
+  def current_pay_grade
+    curr_assignment = self.assignments.current    
+    return nil if curr_assignment.empty?
+    curr_assignment.first.pay_grade.level   # return string representing the level
+  end
+
+  def current_pay_rate
+    curr_assignment = self.assignments.current    
+    return nil if curr_assignment.empty?
+    curr_assignment.first.pay_grade.pay_grade_rates.current.first.rate 
+  end
+  
+  def pay_grade_on(date)
+    assignment_on_date = self.assignments.for_date(date)    
+    return nil if assignment_on_date.empty?
+    assignment_on_date.first.pay_grade.level   # return string representing the level
+  end
+
+  def pay_rate_on(date)
+    assignment_on_date = self.assignments.for_date(date)    
+    return nil if assignment_on_date.empty?
+    pay_grade_on_date = assignment_on_date.first.pay_grade
+    pay_rate_on_date = PayGradeRate.for_date(date).for_pay_grade(pay_grade_on_date).first.rate 
+  end
+
   # Callbacks
   before_save :reformat_phone
   before_save :reformat_ssn
@@ -87,5 +120,16 @@ class Employee < ApplicationRecord
     self.ssn = self.ssn.to_s.gsub(/[^0-9]/,"")
   end
 
+  def do_not_delete
+    throw(:abort)
+  end
+
+  def should_delete?
+    if self.shift.count > 0
+      return false
+    else
+      return true
+    end
+  end
 
 end

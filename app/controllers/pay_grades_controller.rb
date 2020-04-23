@@ -2,7 +2,7 @@ class PayGradesController < ApplicationController
 
   before_action :check_login 
 
-  before_action :set_pay_grade, only: [:edit, :show, :update]
+  before_action :set_pay_grade, only: [:edit, :show, :update, :destroy]
 
   def new
 		@pay_grade = PayGrade.new
@@ -39,11 +39,11 @@ class PayGradesController < ApplicationController
 		end
   end
   
-  def destroy
-    @pay_grade.destroy
-    flash[:notice] = "Removed pay grade from the system."
-    redirect_to pay_grades_url
-  end
+  # def destroy
+  #   @pay_grade.destroy
+  #   flash[:notice] = "Removed pay grade from the system."
+  #   redirect_to pay_grades_url
+  # end
   
   private
     def set_pay_grade

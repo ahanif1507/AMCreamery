@@ -1,7 +1,7 @@
 class EmployeesController < ApplicationController
   
   before_action :check_login 
-  before_action :set_employee, only: [:update, :edit, :show, :detail]
+  before_action :set_employee, only: [:update, :edit, :show, :detail, :destroy]
   
   def index
       @active_managers = Employee.managers.active.alphabetical.paginate(page: params[:page]).per_page(15)
@@ -45,6 +45,12 @@ class EmployeesController < ApplicationController
     else
       render action: 'edit'
     end
+  end
+
+  def destroy
+    @employee.destroy
+    flash[:notice] = "Removed employee from the system."
+    redirect_to employee_url
   end
  
  

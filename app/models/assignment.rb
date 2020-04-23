@@ -16,6 +16,8 @@ class Assignment < ApplicationRecord
   scope :for_employee,  ->(employee) { where("employee_id = ?", employee.id) }
   scope :for_role,      ->(role) { joins(:employee).where("role = ?", role) }
   scope :for_date,      ->(date) { where("start_date <= ? AND (end_date > ? OR end_date IS NULL)", date, date) }
+  scope :for_pay_grade, -> (pay_grade) { joins(:pay_grade).where("pay_level = ?", pay_grade) }
+
 
   # Validations
   validates_presence_of :store_id, :employee_id, :start_date

@@ -1,7 +1,7 @@
 class JobsController < ApplicationController
 
   before_action :check_login 
-  before_action :set_job, only: [:edit, :show, :update]
+  before_action :set_job, only: [:edit, :show, :update, :destroy]
 
   def new
 		@job = Job.new

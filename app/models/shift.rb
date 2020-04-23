@@ -44,14 +44,30 @@ class Shift < ApplicationRecord
   end
 
   def duration
-    shift_time = end_time.ceil(15*60) - start_time.round_off(15*60)
-		duration = shift_time/3600
-		return duration.to_i
+
+    down = round_minutes(start_time, :increment => 15, :direction => :down)
+    up = round_minutes(start_time, :increment => 15, :direction => :up)
+    
+    diff_down = self.start_time - down
+    diff_up = up - self.start_time
+    
+    if diff_down > diff_up 
+      st = up
+    elsif diff_down < diff_up 
+      st = down
+    end
+
+    et = round_minutes(end_time)
+    
+    duration = (et - st) / 3600
+    
+    return duration
+  
   end
 
   def set_end_time
-    self.end_time = self.start_time + (3*60*60)
-    return self.end_time
+    end_time = start_time + (3*60*60)
+    return end_time
   end
 
   private
