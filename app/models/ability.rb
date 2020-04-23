@@ -19,6 +19,7 @@ class Ability
       can :manage, Shift
       can :show, Shift
       cannot [:create, :edit, :destroy], Job
+      can :show, Assignment
 
     elsif user.role? :employee
       
@@ -28,15 +29,15 @@ class Ability
       cannot :manage, Employee
       
       can :show, Employee do |e|
-        e.id == user.employee_id
+        e.id == user.id
       end
     
       can :show, Shift do |s|
-        s.assignment.employee.id == user.employee_id
+        s.assignment.employee.id == user.id
       end
 
-      can :show, Assginment do |a|
-        a.employee.id == user.employee_id
+      can :show, Assignment do |a|
+        a.employee.id == user.id
       end
 
     end
