@@ -57,9 +57,14 @@ Rails.application.routes.draw do
   get 'assignment/create'
   # Your routes go here
   
-  get 'assignments/terminate'
+  post '/assignments/:id/', to 'assignments#terminate', as: :assignments_terminate_path 
   
   get '/employees/:id/detail', to: 'employees#detail', as: :detail
+
+  get 'login', to: 'sessions#new' # a login form
+  post '/sessions', to: 'sessions#create' # the login action itself
+  get 'logout', to: 'sessions#destroy' # the logout
+
   
   resources :employees
   resources :assignments
@@ -69,5 +74,6 @@ Rails.application.routes.draw do
   resources :shifts
   resources :shift_jobs
   resources :jobs
+  resources :sessions
 
 end

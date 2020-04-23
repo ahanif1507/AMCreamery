@@ -1,2 +1,38 @@
-<h1>PayGradeRates#index</h1>
-<p>Find me in app/views/pay_grade_rates/index.html.erb</p>
+<% if @pay_grade_rates.empty? %>
+  <h4>There are no pay grade rates at this time</h4>
+<% else %>
+  <h4>Pay grade rate</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Pay Grade Rate ID</th>
+      <th>Pay Grade ID</th>
+      <th>Rate</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      <th class="align_center">Options</th>
+    </thead>
+    <% for pay_grade_rate in @pay_grade_rates %>
+      <tr>
+        <td><%= pay_grade_rate.id %></td>
+        <td><%= pay_grade_rate.pay_grade.id %></td>
+        <td><%= pay_grade_rate.rate %></td>
+        <td><%= pay_grade_rate.start_date %></td>
+        <td><%= pay_grade_rate.end_date %></td>
+       <td class="align_center">
+        <%= link_to 'Edit', edit_pay_grade_rate_path(pay_grade_rate) %>
+        &nbsp;
+        <%= link_to 'Show', pay_grade_rate_path(pay_grade_rate) %>
+        &nbsp;
+        <%= link_to 'Delete', pay_grade_rate, method: delete %>
+       </td>
+      </tr>
+    <% end %>
+  </table>
+  <br />
+  <%= will_paginate @pay_grade_rates, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
+<% end %>
+<p>&nbsp;</p>
+
+<p><strong>
+<%= link_to "Add a New Pay Grade Rate", new_pay_grade_rate_path, class: 'waves-effect waves-light btn' %> 
+</strong></p>

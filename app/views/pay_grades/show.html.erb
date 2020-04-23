@@ -1,2 +1,14 @@
-<h1>PayGrades#show</h1>
-<p>Find me in app/views/pay_grades/show.html.erb</p>
+<h4>Pay Grade</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Pay Grade ID</th>
+      <th>Level</th>
+      <th>Active</th>
+    </thead>
+      <tr>
+        <td><%= @pay_grade.id %></td>
+        <td><%= @pay_grade.level %></td>
+        <td><%= @pay_grade.active %></td>
+      </tr>
+  </table>
+  <br />

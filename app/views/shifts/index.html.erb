@@ -14,7 +14,7 @@
     </thead>
     <% for shift in @shifts %>
       <tr>
-        <td><%= shift.assignment_id %></td>
+        <td><%= shift.assignment.id %></td>
         <td><%= shift.date %></td>
         <td><%= shift.start_time %></td>
         <td><%= shift.end_time %></td>

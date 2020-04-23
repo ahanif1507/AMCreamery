@@ -1,2 +1,19 @@
-<h1>PayGradeRates#show</h1>
-<p>Find me in app/views/pay_grade_rates/show.html.erb</p>
+<h4>Pay grade rate</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Pay Grade Rate ID</th>
+      <th>Pay Grade ID</th>
+      <th>Rate</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+    </thead>
+    <tr>
+        <td><%= @pay_grade_rate.id %></td>
+        <td><%= @pay_grade_rate.pay_grade.id %></td>
+        <td><%= @pay_grade_rate.rate %></td>
+        <td><%= @pay_grade_rate.start_date %></td>
+        <td><%= @pay_grade_rate.end_date %></td>
+    </tr>
+</table>
+  <br />
+<p>&nbsp;</p>

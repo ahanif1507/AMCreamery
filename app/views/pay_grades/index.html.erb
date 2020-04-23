@@ -1,2 +1,34 @@
-<h1>PayGrades#index</h1>
-<p>Find me in app/views/pay_grades/index.html.erb</p>
+<% if @pay_grades.empty? %>
+  <h4>There are no pay grades at this time</h4>
+<% else %>
+  <h4>Pay grades</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Pay Grade ID</th>
+      <th>Level</th>
+      <th>Active</th>
+      <th class="align_center">Options</th>
+    </thead>
+    <% for pay_grade in @pay_grades %>
+      <tr>
+        <td><%= pay_grade.id %></td>
+        <td><%= pay_grade.level %></td>
+        <td><%= pay_grade.active %></td>
+       <td class="align_center">
+        <%= link_to 'Edit', edit_pay_grade_path(pay_grade) %>
+        &nbsp;
+        <%= link_to 'Show', pay_grade_path(pay_grade) %>
+        &nbsp;
+        <%= link_to 'Delete', pay_grade, method: delete %>
+       </td>
+      </tr>
+    <% end %>
+  </table>
+  <br />
+  <%= will_paginate @pay_grades, previous_label: "Previous&nbsp;", next_label: "&nbsp;Next" %>
+<% end %>
+<p>&nbsp;</p>
+
+<p><strong>
+<%= link_to "Add a New Pay Grade", new_pay_grade_path, class: 'waves-effect waves-light btn' %> 
+</strong></p>
