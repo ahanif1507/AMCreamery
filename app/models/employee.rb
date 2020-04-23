@@ -22,12 +22,13 @@ class Employee < ApplicationRecord
   scope :inactive,        -> { where.not(active: true) }
 
   # Validations
-  validates_presence_of :first_name, :last_name, :ssn, :role, :username
+  validates_presence_of :first_name, :last_name, :ssn, :role
   validates_date :date_of_birth, :on_or_before => lambda { 14.years.ago }, on_or_before_message: 'must be at least 14 years old'
   validates_format_of :phone, with: /\A(\d{10}|\(?\d{3}\)?[-. ]\d{3}[-.]\d{4})\z/, message: 'should be 10 digits (area code needed) and delimited with dashes only'
   validates_format_of :ssn, with: /\A\d{3}[- ]?\d{2}[- ]?\d{4}\z/, message: 'should be 9 digits and delimited with dashes only'
   validates_uniqueness_of :ssn
   validates_inclusion_of :role, in: %w[admin manager employee], message: 'is not an option'
+  validates_presence_of :username
   validates_uniqueness_of :username
   validates_presence_of :password, :on => :create 
   validates_presence_of :password_confirmation, :on => :create 

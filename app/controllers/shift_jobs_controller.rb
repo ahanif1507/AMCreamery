@@ -55,4 +55,3 @@ class ShiftJobsController < ApplicationController
     end
 
 end
-end
