@@ -57,7 +57,7 @@ Rails.application.routes.draw do
   get 'assignment/create'
   # Your routes go here
   
-  post '/assignments/:id/', to 'assignments#terminate', as: :assignments_terminate_path 
+  post '/assignments/:id/', to: 'assignments#terminate', as: :assignments_terminate_path 
   
   get '/employees/:id/detail', to: 'employees#detail', as: :detail
 
