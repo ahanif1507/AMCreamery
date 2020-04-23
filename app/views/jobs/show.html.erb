@@ -1,2 +1,18 @@
-<h1>Jobs#show</h1>
-<p>Find me in app/views/jobs/show.html.erb</p>
+<h4>Job</h4>
+  <table class="striped highlight">
+    <thead>
+      <th>Job ID</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Active</th>
+    </thead>
+      <tr>
+        <td><%= @job.id %></td>
+        <td><%= @job.name %></td>
+        <td><%= @job.description %></td>
+        <td><%= @job.active %></td>
+      </tr>
+
+  </table>
+  <br />
+<p>&nbsp;</p>

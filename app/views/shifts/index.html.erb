@@ -26,9 +26,10 @@
         &nbsp;
         <%= link_to 'Show', shift_path(shift) %>
         &nbsp;
-        <%= link_to 'Delete', destroy_shift_path(shift) %>
+        <%= link_to 'Delete', shift, method: delete %>
        </td>
       </tr>
+
     <% end %>
   </table>
   <br />
