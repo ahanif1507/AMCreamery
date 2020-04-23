@@ -7,7 +7,7 @@ class Job < ApplicationRecord
     has_many :shifts, through: :shift_jobs
     
     #validations
-    validates_presence_of :level
+    validates_presence_of :name
     
     #scopes
     scope :alphabetical,    -> {order('name')}
@@ -30,7 +30,7 @@ class Job < ApplicationRecord
 
     #only delete if the job has never been recorded as being done by an employee during a shift
     def should_delete?
-        return self.shift.report_completed?
+        return self.shift_jobs.count > 0
     end
 
 end
