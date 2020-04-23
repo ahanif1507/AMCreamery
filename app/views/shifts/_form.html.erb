@@ -1,0 +1,18 @@
+<%= simple_form_for(@shift) do |f| %>
+  <%= f.error_notification %>
+  <div class="row">
+    <div class="form-inputs">
+      <%= f.input :assignment_id, label_html: { class: 'active' } %>
+      <%= f.input :date, label_html: { class: 'active' } %>
+      <%= f.input :start_time, label_html: { class: 'active' } %>
+      <%= f.input :end_time, label_html: { class: 'active' } %>
+      <%= f.input :notes, label_html: { class: 'active' } %>
+      <%= f.input :status, label_html: { class: 'active' } %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="form-actions col s8">
+      <%= f.button :submit %>
+    </div>
+  </div>
+<% end %>

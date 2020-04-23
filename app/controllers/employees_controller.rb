@@ -1,5 +1,6 @@
 class EmployeesController < ApplicationController
   
+  before_action :check_login 
   before_action :set_employee, only: [:update, :edit, :show, :detail]
   
   def index

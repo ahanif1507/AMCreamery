@@ -2,6 +2,17 @@ class Employee < ApplicationRecord
 
   has_secure_password
 
+  def self.authenticate(username, password)
+    find_by_username(username).try(:authenticate, password)
+  end
+
+  ROLES = [['Admin', :admin,['Manager', :manager],['Employee', :employee]]
+
+  def role?(authorized_role)
+    return false if role.nil?
+    role.to_sym == authorized_role
+  end
+
   # Relationships
   has_many :assignments
   has_many :stores, through: :assignments

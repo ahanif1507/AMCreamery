@@ -15,7 +15,7 @@ class Shift < ApplicationRecord
   has_many :jobs, through: :shift_jobs
   
   #validations
-  validates_presence_of :assignment_id, :status, :date, :start_time
+  validates_presence_of :assignment_id, :status, :date
   validates_inclusion_of :status, in: %w[pending started finished]
   validates_date :date, on_or_after: :start_date
   validates_time :start_time
@@ -46,7 +46,7 @@ class Shift < ApplicationRecord
   def duration
     shift_time = end_time.ceil(15*60) - start_time.round_off(15*60)
 		duration = shift_time/3600
-		return duration
+		return duration.to_i
   end
 
   def set_end_time

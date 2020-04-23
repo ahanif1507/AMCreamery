@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
     
+  get 'sessions/new'
   get 'jobs/new'
   get 'jobs/edit'
   get 'jobs/index'
@@ -63,5 +64,10 @@ Rails.application.routes.draw do
   resources :employees
   resources :assignments
   resources :stores
+  resources :pay_grades
+  resources :pay_grade_rates
+  resources :shifts
+  resources :shift_jobs
+  resources :jobs
 
 end

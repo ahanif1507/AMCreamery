@@ -1,5 +1,6 @@
 class AssignmentsController < ApplicationController
   
+  before_action :check_login 
   before_action :set_assignment, only: [:destroy, :terminate]
   
   def index
